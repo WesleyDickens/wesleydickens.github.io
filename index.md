@@ -22,7 +22,6 @@
             </a>
           </li>
           {% endif %}
-          {% if site.twitter_username %}
           <li class="list-inline-item">
             <a href="https://twitter.com/{{ site.twitter_username }}">
               <span class="fa-stack fa-lg">
@@ -31,7 +30,6 @@
               </span>
             </a>
           </li>
-          {% endif %}
           {% if site.facebook_username %}
           <li class="list-inline-item">
             <a href="https://www.facebook.com/{{ site.facebook_username }}">
