@@ -4,14 +4,7 @@
 - [Instagram](instagram.com/{{ site.instagram_username }})
 - [LinkedIn](linkedin.com/{{ site.linkedin_username }})
 
- <li class="list-inline-item">
-   <a href="https://twitter.com/{{ site.twitter_username }}">
-     <span class="fa-stack fa-lg">
-       <i class="fas fa-circle fa-stack-2x"></i>
-       <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-     </span>
-   </a>
- </li>
+https://twitter.com/{{ site.twitter_username }}
    
 <hr>
 
