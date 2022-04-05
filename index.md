@@ -1,2 +1,2 @@
 ## Welcome
-- [Socials](/pages/socials)
+- [Socials](/pages/socials.md)
