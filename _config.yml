@@ -4,11 +4,7 @@ author:             Wesley Dickens
 url:                "https://wesleydickens.com"
 
 # Social Profiles
-twitter_username:   wesleydickens
-github_username:    wesleydickens
-facebook_username:  wesleydickens
-instagram_username:  wesleydickens
-linkedin_username:  wesleydickens
+social_username:   wesleydickens
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
