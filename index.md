@@ -2,12 +2,8 @@
 - [Socials](/pages/socials.md)
 - [Blog Posts](/pages/blog_landing.md)
 
-<html>
-<head>
-  <link rel="stylesheet" href="styles.css">
-</head>
 
-<h1>Material Design Card</h1>
+<h1>Posts</h1>
 <div class="container">
   <div class="row">
     <div class="col-md-4">
@@ -78,4 +74,4 @@
 </div>
   </div>
 </div>
-</html>
+
