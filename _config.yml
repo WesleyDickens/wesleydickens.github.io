@@ -4,7 +4,7 @@ author:             Wesley Dickens
 url:                "https://wesleydickens.com"
 
 # Social Profiles
-social_username:   wesleydickens
+social_username: wesleydickens
 
 # Build settings
 markdown:           kramdown
