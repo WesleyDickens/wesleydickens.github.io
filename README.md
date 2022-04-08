@@ -1,1 +1,0 @@
-# wesleydickens.github.io
