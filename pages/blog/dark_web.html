@@ -3,37 +3,80 @@
 <u><b>The Internet</b></u>
 <p>To understand how the dark web works we'll need to first take a step back and understand how the internet works.</p>
 
-<p>I saw a funny sticker a while back that said "The cloud doesn't exist, it's just other people's computers" and that's actually a great (albeit extremely over-simplified) way to conceptualize the internet.</p>
-    
-<p>When you open a browser and type "twitter.com" your computer sends a message to your ISP's (Comcast, Spectrum, Verizon, etc.) server -- which is essentially just a big computer -- that says "I want to get data from twitter.com". If that's a valid address then your ISP sends a message to Twitter's server that says "Wesley wants to get data from you". Twitter then sends data to your ISP, which sends it back to you, and the webpage loads.</p>
+<p>I saw a funny sticker a while back that said "The cloud doesn't exist, it's just other people's computers" and that's
+    actually a great (albeit extremely over-simplified) way to conceptualize the internet.</p>
+
+<p>When you open a browser and type "twitter.com" your computer sends a message to your ISP's (Comcast, Spectrum,
+    Verizon, etc.) server -- which is essentially just a big computer -- that says "I want to get data from
+    twitter.com". If that's a valid address then your ISP sends a message to Twitter's server that says "Wesley wants to
+    get data from you". Twitter then sends data to your ISP, which sends it back to you, and the webpage loads.</p>
 <p>
     <img alt="The Internet" src="/assets/the_internet.png" width=500" height="300">
 </p>
 <u><b>Encryption</b></u>
-<p>Another key element of the dark web is encryption, it's actually the main element. In the example I just gave about accessing Twitter there were a total of 4 messages exchanged, and each of those was encrypted, meaning no one outside of the participants of the chain (Twitter, my ISP, and myself) can see the messages or their contents without having a "secret password" -- I'll go into more detail about those passwords (aka public and private encryption keys) in a future post about the blockchain/cryptocurrency.</p>
+<p>Another key element of the dark web is encryption, it's actually the main element. In the example I just gave about
+    accessing Twitter there were a total of 4 messages exchanged, and each of those was encrypted, meaning no one
+    outside of the participants of the chain (Twitter, my ISP, and myself) can see the messages or their contents
+    without having a "secret password" -- I'll go into more detail about those passwords (aka public and private
+    encryption keys) in a future post about the blockchain/cryptocurrency.</p>
 
-<p>But what's important to note here is that all 3 of the participants in that exchange can see the data being exchanged, and if someone were to decipher the "secret password" they would be able to intercept the data in transmission and see the entire "conversation" between the 3 participants.</p>
+<p>But what's important to note here is that all 3 of the participants in that exchange can see the data being
+    exchanged, and if someone were to decipher the "secret password" they would be able to intercept the data in
+    transmission and see the entire "conversation" between the 3 participants.</p>
 
 <u><b>The Dark Web</b></u>
-<p>Now we're getting into the dark web. The dark web is *an* internet, but one that exists separately from what we refer to as *the* internet. Think of the internet as a network of billions of computers in one house, and the dark web as a network of millions of computers in the house next door.</p>
+<p>Now we're getting into the dark web. The dark web is *an* internet, but one that exists separately from what we refer
+    to as *the* internet. Think of the internet as a network of billions of computers in one house, and the dark web as
+    a network of millions of computers in the house next door.</p>
 
 <u><b>Onion Network</b></u>
-<p>The dark web uses what's called the "Onion Protocol", because onions have layers and that's a defining feature of this version of the internet.</p>
+<p>The dark web uses what's called the "Onion Protocol", because onions have layers and that's a defining feature of
+    this version of the internet.</p>
 
-<p>Let's look at how we'd access Twitter on the Onion Protocol. You open up the Tor browser (the browser used to access the Onion Network) and type in Twitter.onion. (like .com but for the onion network) Your computer sends a message to Tor Computer A saying "I want to go to this address". Computer A forwards that message to Computer B, B forwards to C, and C forwards it to what's called an Exit Node. The Exit Node is the only computer in the chain that actually interacts with the Twitter.onion server. Twitter.onion then sends a message back and the process is repeated but through a different combination of computers.</p>
+<p>Let's look at how we'd access Twitter on the Onion Protocol. You open up the Tor browser (the browser used to access
+    the Onion Network) and type in Twitter.onion. (like .com but for the onion network) Your computer sends a message to
+    Tor Computer A saying "I want to go to this address". Computer A forwards that message to Computer B, B forwards to
+    C, and C forwards it to what's called an Exit Node. The Exit Node is the only computer in the chain that actually
+    interacts with the Twitter.onion server. Twitter.onion then sends a message back and the process is repeated but
+    through a different combination of computers.</p>
 <p>
     <img alt="Onion Routing" src="/assets/onion_routing.png" width=500" height="300">
 </p>
 <u><b>But how is this different/more anonymous than the regular internet?</b></u>
-<p>As you'll recall, on the normal internet all the participants in the exchange can see the message being exchanged. On the onion network, the messages are encrypted such that each node only knows what node to hop to next. They don't know who requested the information, or what the final destination is, just "I got a message from this computer telling me to pass the message to that computer".</p>
+<p>As you'll recall, on the normal internet all the participants in the exchange can see the message being exchanged. On
+    the onion network, the messages are encrypted such that each node only knows what node to hop to next. They don't
+    know who requested the information, or what the final destination is, just "I got a message from this computer
+    telling me to pass the message to that computer".</p>
 
-<p>Let's use the example of passing notes in class. You write a note to Susie saying "I hate this class" but written in a secret code that can only be decoded if it gets to Susie in a specific path around the classroom. You pass the secret message to Jimmy and he uses his personal decoder ring and the message says "Pass this note to Brian: [secret code #1]". Brian uses his personal decoder ring and the message says "Pass this note to Susie: [secret code #2]". Susie uses her decoder ring and gets the plain message "I hate this class, send back to [secret code #3] -- She writes her response and it passes around the room in the same way but with a different route/set of students until finally it gets back to you and you decode it.
+<p>Let's use a more simple example: passing notes in class.</p>
+<p>
+    You write a note to Susie saying "I hate this class" but written in a secret code that can only be decoded if it
+    gets to Susie in a specific path around the classroom.
+    You pass the secret message to Jimmy and he uses his personal decoder ring and the message says "Pass this note to
+    Brian: [secret code #1]".
+    Brian uses his personal decoder ring and the message says "Pass this note to Susie: [secret code #2]".
+    Susie uses her decoder ring and gets the plain message "I hate this class, send back to [secret code #3] --
+    She writes her response and it passes around the room in the same way but with a different route/set of students
+    until
+    finally it gets back to you and you decode it.
 </p>
-<p>The only person who knows what the final message was is Susie -- who doesn't know who sent it, and the only person who knows you sent a note -- But not the contents, or even if you were the one that wrote it -- is Jimmy.</p>
+<p>
+    The only person who knows what the final message was is Susie -- who doesn't know who sent it --
+    and the only person who knows you sent a note -- But not the contents, or even if you were the one that wrote it --
+    is Jimmy.
+</p>
 
-<p>If the teacher were to grab the note at any step they wouldn't be able to know the complete message -- They would only be able to decipher what the next step was; Even if the teacher grabbed the note at the first step or the last step, they wouldn't be able to know who the original sender or the destination was.</p>
+<p>If the teacher were to grab the note at any step they wouldn't be able to know the complete message --
+    They would only be able to decipher what the next step was; Even if the teacher grabbed the note at the first step
+    or
+    the last step, they wouldn't be able to know who the original sender or the destination was.
+</p>
 
-<p>That's the main appeal of the onion network and why it's used for everything from buying drugs to hiring assassins -- Because it is almost* entirely impossible to track your activity.</p>  
+<p>
+    That's the main appeal of the onion network and why it's used for everything from buying drugs to hiring assassins
+    --
+    Because it is almost* entirely impossible to track your activity.
+</p>
 
 <u><b>So in summary:</b></u>
 <li>When you establish a connection (send a message), only you know the complete route</li>
