@@ -1,3 +1,0 @@
-- [Twitter](https://twitter.com/{{ site.social_username }})
-- [Instagram](https://instagram.com/{{ site.social_username }})
-- [LinkedIn](https://linkedin.com/{{ site.social_username }})

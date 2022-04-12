@@ -58,13 +58,6 @@ nav a{
   padding-left: 20px;
 }
 
-/* Fake image */
-.fakeimg {
-  background-color: white;
-  width: auto;
-  padding: 20px;
-}
-
 /* Add a card effect for articles */
 .card {
    background-color: white;

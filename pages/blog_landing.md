@@ -1,3 +1,0 @@
-- [Blog Post 1](/pages/blog/post1.md)
-- [Blog Post 2](/pages/blog/post2.md)
-- [Blog Post 3](/pages/blog/post3.md)
