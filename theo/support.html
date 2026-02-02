@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support - Theo</title>
+  <meta name="description" content="Get help with Theo iOS app - contact form and frequently asked questions">
+  <link rel="stylesheet" href="/theo/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Support</h1>
+      <p>Need help? We're here for you.</p>
+    </header>
+
+    <nav aria-label="Legal pages">
+      <ul>
+        <li><a href="/theo/">Home</a></li>
+        <li><a href="/theo/privacy">Privacy Policy</a></li>
+        <li><a href="/theo/terms">Terms of Service</a></li>
+        <li><a href="/theo/support">Support</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Fill out the form below and we'll get back to you within 24-48 hours.</p>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+          <input type="hidden" name="subject" value="Theo Support Request">
+          <input type="hidden" name="from_name" value="Theo Support Form">
+
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required placeholder="John Doe">
+
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com">
+
+          <label for="category">Category:</label>
+          <select id="category" name="category" required>
+            <option value="">Select a category</option>
+            <option value="Account Issues">Account Issues</option>
+            <option value="Subscription/Billing">Subscription/Billing</option>
+            <option value="Technical Problem">Technical Problem</option>
+            <option value="Feedback">Feedback</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="6" required placeholder="Please describe your issue or question..."></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>How do I cancel my subscription?</h3>
+        <p>To cancel your Theo subscription:</p>
+        <ol>
+          <li>Open the <strong>Settings</strong> app on your iPhone or iPad</li>
+          <li>Tap your name at the top of the screen</li>
+          <li>Tap <strong>Subscriptions</strong></li>
+          <li>Select <strong>Theo</strong> from the list</li>
+          <li>Tap <strong>Cancel Subscription</strong></li>
+        </ol>
+        <p><strong>Important:</strong> You must cancel at least 24 hours before your renewal date to avoid being charged for the next period.</p>
+
+        <h3>Can I get a refund?</h3>
+        <p>All subscription purchases are processed through Apple, and refunds are handled by Apple according to their refund policy.</p>
+        <p>To request a refund:</p>
+        <ol>
+          <li>Visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer">reportaproblem.apple.com</a></li>
+          <li>Sign in with your Apple ID</li>
+          <li>Find your Theo subscription purchase</li>
+          <li>Click "Report a Problem"</li>
+          <li>Select "Request a refund" and follow the instructions</li>
+        </ol>
+        <p>Refund approval is at Apple's sole discretion. We cannot process refund requests directly.</p>
+
+        <h3>How do I delete my account?</h3>
+        <p>To permanently delete your Theo account and all associated data:</p>
+        <ol>
+          <li>Open the Theo app on your device</li>
+          <li>Go to <strong>Settings</strong> (tap the gear icon)</li>
+          <li>Scroll down and tap <strong>Account</strong></li>
+          <li>Tap <strong>Delete Account</strong></li>
+          <li>Confirm the deletion when prompted</li>
+        </ol>
+        <p><strong>Note:</strong> This action is permanent and cannot be undone. All your conversations, messages, and preferences will be deleted within 30 days.</p>
+        <p><strong>Important:</strong> Deleting your account does not cancel your subscription. You must cancel your subscription separately (see above) to avoid future charges.</p>
+
+        <h3>How do I change my theologian selection?</h3>
+        <p>You can change your active theologian at any time:</p>
+        <ol>
+          <li>Open the Theo app</li>
+          <li>Go to the main conversation screen</li>
+          <li>Tap the theologian's name or avatar at the top</li>
+          <li>Select a different theologian from the list</li>
+        </ol>
+        <p>Note that changing theologians starts a new conversation context. Your previous conversations remain accessible in your conversation history.</p>
+
+        <h3>Why am I not receiving responses?</h3>
+        <p>If you're experiencing issues with receiving responses, try these troubleshooting steps:</p>
+        <ul>
+          <li><strong>Check your internet connection:</strong> The app requires an active internet connection to generate responses</li>
+          <li><strong>Verify your subscription:</strong> Premium features require an active subscription. Check Settings > Account > Subscription Status</li>
+          <li><strong>Restart the app:</strong> Close the app completely and reopen it</li>
+          <li><strong>Update the app:</strong> Make sure you have the latest version from the App Store</li>
+          <li><strong>Check Apple's server status:</strong> Visit <a href="https://www.apple.com/support/systemstatus/" target="_blank" rel="noopener noreferrer">apple.com/support/systemstatus</a></li>
+        </ul>
+        <p>If the problem persists, please contact us using the form above with details about the issue.</p>
+
+        <h3>How do I export my conversation history?</h3>
+        <p>Currently, Theo does not support exporting conversation history. This feature is planned for a future update.</p>
+        <p>If you need access to your data for GDPR or CCPA compliance purposes, please contact us at privacy@wesleydickens.com, and we will provide your data in a portable format within 30 days.</p>
+
+        <h3>Is my data secure?</h3>
+        <p>Yes. We take data security seriously:</p>
+        <ul>
+          <li>All data is encrypted in transit using HTTPS</li>
+          <li>Database storage is encrypted at rest</li>
+          <li>We use OAuth 2.0 authentication protocols</li>
+          <li>We do not sell your personal information</li>
+        </ul>
+        <p>For more details, see our <a href="/theo/privacy">Privacy Policy</a>.</p>
+
+        <h3>Can I use Theo on multiple devices?</h3>
+        <p>Yes. Your account and conversation history sync across all devices where you're signed in with the same Apple ID or Google account. Simply download the Theo app on your other devices and sign in.</p>
+
+        <h3>How accurate are the theologian responses?</h3>
+        <p>Theo uses advanced AI to generate responses attributed to historical theologians. While we strive for accuracy, these are AI interpretations based on trained models, not actual responses from the theologians.</p>
+        <p>Responses may contain errors or limitations inherent in AI systems. For authoritative theological guidance, we recommend consulting primary sources or qualified religious leaders.</p>
+
+        <h3>What is the 7-day free trial?</h3>
+        <p>New subscribers can try Theo premium features free for 7 days. During the trial:</p>
+        <ul>
+          <li>You have full access to all premium features</li>
+          <li>You will not be charged during the trial period</li>
+          <li>You can cancel anytime before the trial ends without charge</li>
+          <li>If you don't cancel, your subscription automatically begins after 7 days</li>
+        </ul>
+        <p>To avoid charges, cancel at least 24 hours before the trial ends.</p>
+
+        <h3>I have a different question</h3>
+        <p>If your question isn't answered here, please use the contact form above to reach out to our support team. We typically respond within 24-48 hours.</p>
+      </section>
+
+      <section id="additional-resources">
+        <h2>Additional Resources</h2>
+        <ul>
+          <li><a href="/theo/privacy">Privacy Policy</a> - How we handle your data</li>
+          <li><a href="/theo/terms">Terms of Service</a> - Terms and conditions for using Theo</li>
+          <li><a href="https://www.apple.com/support/systemstatus/" target="_blank" rel="noopener noreferrer">Apple System Status</a> - Check if Apple services are experiencing issues</li>
+          <li><a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer">Apple Report a Problem</a> - Request refunds for App Store purchases</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Theo. All rights reserved. | <a href="/theo/privacy">Privacy Policy</a> | <a href="/theo/terms">Terms of Service</a> | <a href="/theo/support">Support</a></p>
+    </footer>
+  </div>
+</body>
+</html>
