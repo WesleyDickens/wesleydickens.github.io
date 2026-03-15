@@ -5,25 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms of Service - Theo</title>
   <meta name="description" content="Terms of service for Theo iOS app including subscription terms">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/theo/styles.css">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Terms of Service</h1>
-      <p>Last updated: <time datetime="2026-02-01">February 1, 2026</time></p>
+  <div class="page">
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="/theo/" class="brand">Theo</a>
+        <nav aria-label="Legal pages">
+          <ul class="site-nav">
+            <li><a href="/theo/privacy">Privacy</a></li>
+            <li><a href="/theo/terms" class="is-active">Terms</a></li>
+            <li><a href="/theo/support">Support</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <nav aria-label="Legal pages">
-      <ul>
-        <li><a href="/theo/">Home</a></li>
-        <li><a href="/theo/privacy">Privacy Policy</a></li>
-        <li><a href="/theo/terms">Terms of Service</a></li>
-        <li><a href="/theo/support">Support</a></li>
-      </ul>
-    </nav>
+    <main class="content">
+      <h1 class="page-title">Terms of Service</h1>
+      <p class="page-subtitle">Last updated: <time datetime="2026-02-01">February 1, 2026</time></p>
+      <hr class="accent-rule">
 
-    <main>
       <section id="agreement">
         <h2>1. Agreement to Terms</h2>
         <p>These Terms of Service ("Terms") govern your access to and use of the Theo mobile application (the "App"), operated by Theo ("we," "us," or "our"). By accessing or using the App, you agree to be bound by these Terms. If you do not agree to these Terms, do not use the App.</p>
@@ -269,8 +275,13 @@
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 Theo. All rights reserved. | <a href="/theo/privacy">Privacy Policy</a> | <a href="/theo/terms">Terms of Service</a> | <a href="/theo/support">Support</a></p>
+    <footer class="site-footer">
+      <ul class="footer-links">
+        <li><a href="/theo/privacy">Privacy</a></li>
+        <li><a href="/theo/terms">Terms</a></li>
+        <li><a href="/theo/support">Support</a></li>
+      </ul>
+      <p class="copyright">&copy; 2026 Theo. All rights reserved.</p>
     </footer>
   </div>
 </body>

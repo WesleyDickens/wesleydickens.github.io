@@ -5,36 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Theo - Legal & Support</title>
   <meta name="description" content="Legal information and support for Theo iOS app">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/theo/styles.css">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Theo</h1>
-      <p>Theologian-attributed responses to your questions</p>
+  <div class="page">
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="/theo/" class="brand">Theo</a>
+        <nav aria-label="Legal pages">
+          <ul class="site-nav">
+            <li><a href="/theo/privacy">Privacy</a></li>
+            <li><a href="/theo/terms">Terms</a></li>
+            <li><a href="/theo/support">Support</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <section>
-        <h2>Legal & Support Information</h2>
-        <p>Welcome to the Theo compliance and support portal. Here you can find information about our policies and get help with the app.</p>
+    <main class="content">
+      <h1 class="page-title">Theo</h1>
+      <p class="page-subtitle">Theologian-attributed responses to your questions</p>
+      <hr class="accent-rule">
 
-        <ul style="font-size: 1.1em; margin-top: 2rem;">
-          <li style="margin-bottom: 1rem;">
-            <a href="/theo/privacy">Privacy Policy</a> - How we collect, use, and protect your data
+      <section>
+        <h2>Legal & Support</h2>
+        <p class="intro-text">Welcome to the Theo compliance and support portal. Find information about our policies and get help with the app.</p>
+
+        <ul class="link-cards">
+          <li class="link-card">
+            <a href="/theo/privacy">Privacy Policy</a>
+            <p>How we collect, use, and protect your data</p>
           </li>
-          <li style="margin-bottom: 1rem;">
-            <a href="/theo/terms">Terms of Service</a> - Terms and conditions for using Theo
+          <li class="link-card">
+            <a href="/theo/terms">Terms of Service</a>
+            <p>Terms and conditions for using Theo</p>
           </li>
-          <li style="margin-bottom: 1rem;">
-            <a href="/theo/support">Support</a> - Get help and contact us
+          <li class="link-card">
+            <a href="/theo/support">Support</a>
+            <p>Get help and contact us</p>
           </li>
         </ul>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 Theo. All rights reserved.</p>
+    <footer class="site-footer">
+      <ul class="footer-links">
+        <li><a href="/theo/privacy">Privacy</a></li>
+        <li><a href="/theo/terms">Terms</a></li>
+        <li><a href="/theo/support">Support</a></li>
+      </ul>
+      <p class="copyright">&copy; 2026 Theo. All rights reserved.</p>
     </footer>
   </div>
 </body>
