@@ -1,24 +1,24 @@
-/* Root Page Styles */
+/* ═══════════════════════════════════════════════════
+   Wesley Dickens — Root Landing Page
+   Aesthetic: Refined dark luxury, atmospheric depth
+   ═══════════════════════════════════════════════════ */
 
 :root {
-  --color-black: #111111;
-  --color-white: #FFFFFF;
-  --color-gray-50: #F9FAFB;
-  --color-gray-100: #F3F4F6;
-  --color-gray-200: #E5E7EB;
-  --color-gray-400: #9CA3AF;
-  --color-gray-500: #6B7280;
-  --color-gray-700: #374151;
-  --color-gray-900: #111827;
-  --color-accent: #2563EB;
-  --color-accent-hover: #1D4ED8;
+  --color-ink: #0a0a0a;
+  --color-surface: #111113;
+  --color-elevated: #1a1a1f;
+  --color-border: rgba(255,255,255,0.06);
+  --color-border-hover: rgba(255,255,255,0.12);
+  --color-text: #e8e8ed;
+  --color-text-muted: #6e6e7a;
+  --color-text-dim: #44444f;
+  --color-accent: #5b8def;
+  --color-accent-glow: rgba(91,141,239,0.15);
 
-  --font-heading: 'DM Sans', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: 'DM Sans', -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
 
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
-  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
-  --radius: 8px;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 *, *::before, *::after {
@@ -27,17 +27,49 @@
   padding: 0;
 }
 
+html {
+  background: var(--color-ink);
+}
+
 body {
   font-family: var(--font-body);
   font-weight: 400;
-  color: var(--color-gray-700);
-  background: var(--color-white);
+  color: var(--color-text);
+  background: var(--color-ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-/* Hero Layout */
+/* ── Noise Texture Overlay ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 256px;
+  pointer-events: none;
+}
+
+/* ── Ambient Gradient Orbs ── */
+body::after {
+  content: '';
+  position: fixed;
+  top: -30%;
+  left: -10%;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(91,141,239,0.06) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ── Hero Layout ── */
 .hero {
+  position: relative;
+  z-index: 1;
   display: grid;
   place-items: center;
   min-height: 100vh;
@@ -46,112 +78,214 @@ body {
 }
 
 .hero-inner {
-  max-width: 600px;
+  max-width: 640px;
+  animation: heroReveal 1.2s var(--ease-out-expo) both;
 }
 
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Name ── */
 .hero-name {
   font-family: var(--font-heading);
-  font-size: 3.5rem;
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
   font-weight: 700;
-  color: var(--color-black);
-  letter-spacing: -0.03em;
-  line-height: 1.1;
+  color: var(--color-text);
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  background: linear-gradient(135deg, #ffffff 0%, #b0b0c0 50%, #ffffff 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 8s ease-in-out infinite;
 }
 
+@keyframes shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ── Tagline ── */
 .hero-tagline {
   font-family: var(--font-body);
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: 0.8125rem;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--color-gray-500);
-  margin-top: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--color-text-muted);
+  margin-top: 1rem;
+  animation: fadeIn 1s 0.3s var(--ease-out-expo) both;
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ── Divider ── */
 .hero-rule {
   display: block;
-  width: 40px;
-  height: 2px;
-  background: var(--color-gray-200);
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, transparent, var(--color-text-dim), transparent);
   border: none;
-  margin: 2.5rem auto;
+  margin: 3rem auto;
+  animation: fadeIn 1s 0.5s var(--ease-out-expo) both;
 }
 
-/* Projects Section */
+/* ── Projects Section ── */
 .projects-heading {
-  font-family: var(--font-heading);
-  font-size: 0.8125rem;
-  font-weight: 600;
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-gray-400);
-  margin-bottom: 1.25rem;
+  letter-spacing: 0.18em;
+  color: var(--color-text-dim);
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1s 0.6s var(--ease-out-expo) both;
 }
 
+/* ── Project Card ── */
 .project-card {
+  position: relative;
   display: block;
   text-decoration: none;
-  border: 1px solid var(--color-gray-200);
-  border-radius: var(--radius);
-  padding: 1.5rem 2rem;
-  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
-  text-align: left;
-  max-width: 400px;
+  max-width: 420px;
   margin: 0 auto;
+  padding: 1.75rem 2rem;
+  background: var(--color-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  text-align: left;
+  overflow: hidden;
+  transition: transform 0.5s var(--ease-out-expo),
+              border-color 0.4s ease,
+              box-shadow 0.4s ease;
+  animation: cardReveal 0.8s 0.7s var(--ease-out-expo) both;
+}
+
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(91,141,239,0.06),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.project-card:hover::before {
+  opacity: 1;
 }
 
 .project-card:hover {
-  box-shadow: var(--shadow-md);
-  border-color: var(--color-gray-400);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  border-color: var(--color-border-hover);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3),
+              0 0 0 1px rgba(91,141,239,0.08);
+}
+
+/* Arrow indicator */
+.project-card::after {
+  content: '\2197';
+  position: absolute;
+  top: 1.75rem;
+  right: 2rem;
+  font-size: 1.25rem;
+  color: var(--color-text-dim);
+  transition: color 0.3s ease, transform 0.3s var(--ease-out-expo);
+}
+
+.project-card:hover::after {
+  color: var(--color-accent);
+  transform: translate(2px, -2px);
 }
 
 .project-card-name {
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1.25rem;
-  color: var(--color-black);
+  color: var(--color-text);
+  letter-spacing: -0.01em;
 }
 
 .project-card-desc {
   font-size: 0.875rem;
-  color: var(--color-gray-500);
-  margin-top: 0.25rem;
+  color: var(--color-text-muted);
+  margin-top: 0.375rem;
   line-height: 1.5;
 }
 
-/* Footer */
+/* ── Footer ── */
 .site-footer {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 1;
   text-align: center;
   padding: 1.5rem;
+  animation: fadeIn 1s 1s var(--ease-out-expo) both;
 }
 
 .site-footer p {
-  font-size: 0.8125rem;
-  color: var(--color-gray-400);
+  font-size: 0.75rem;
+  color: var(--color-text-dim);
+  letter-spacing: 0.02em;
 }
 
-/* Responsive */
+/* ── Responsive ── */
 @media (max-width: 768px) {
-  .hero-name {
-    font-size: 2.5rem;
+  .project-card {
+    padding: 1.5rem;
+    border-radius: 12px;
   }
 
-  .project-card {
-    padding: 1.25rem 1.5rem;
+  .project-card::after {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .hero-rule {
+    height: 36px;
+    margin: 2.5rem auto;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-name {
-    font-size: 2rem;
-  }
-
   .hero {
     padding: 1.5rem;
+  }
+}
+
+/* ── Interaction: Card mouse-follow glow ── */
+@media (hover: hover) {
+  .project-card {
+    cursor: pointer;
   }
 }
