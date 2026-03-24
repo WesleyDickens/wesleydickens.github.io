@@ -351,6 +351,12 @@ time {
   color: var(--color-ink);
 }
 
+.link-card a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
 .link-card a:hover {
   color: var(--color-accent);
 }
