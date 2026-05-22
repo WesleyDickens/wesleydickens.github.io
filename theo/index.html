@@ -3,21 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Theo - Legal & Support</title>
-  <meta name="description" content="Legal information and support for Theo iOS app">
+  <title>Theo — Theologian-attributed Q&A</title>
+  <meta name="description" content="Theo is an iOS app for asking theological questions and receiving structured, source-cited responses attributed to Augustine, Aquinas, Luther, Calvin, or C.S. Lewis. Currently in closed beta.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/tokens.css">
   <link rel="stylesheet" href="/theo/styles.css">
 </head>
 <body>
   <div class="page">
     <header class="site-header">
       <div class="header-inner">
-        <a href="/theo/" class="brand">Theo</a>
-        <nav aria-label="Legal pages">
+        <div class="header-left">
+          <a href="/" class="back-link">&larr; Wesley Dickens</a>
+          <a href="/theo/" class="brand">Theo</a>
+        </div>
+        <nav aria-label="Site pages">
           <ul class="site-nav">
             <li><a href="/theo/welcome">Welcome</a></li>
+            <li><a href="/theo/how-it-works">How It Works</a></li>
             <li><a href="/theo/privacy">Privacy</a></li>
             <li><a href="/theo/terms">Terms</a></li>
             <li><a href="/theo/support">Support</a></li>
@@ -27,14 +32,28 @@
     </header>
 
     <main class="content">
+      <span class="beta-badge">Closed Beta</span>
       <h1 class="page-title">Theo</h1>
-      <p class="page-subtitle">Theologian-attributed responses to your questions</p>
+      <p class="page-subtitle">Theologian-attributed Q&amp;A with structured citations</p>
       <hr class="accent-rule">
 
       <section>
-        <h2>Legal & Support</h2>
-        <p class="intro-text">Welcome to the Theo compliance and support portal. Find information about our policies and get help with the app.</p>
+        <p class="intro-text">Theo is an iOS app for asking theological questions and receiving responses attributed to specific theologians &mdash; Augustine, Aquinas, Luther, Calvin, and C.S. Lewis. Interpretation is presented in third person, direct quotes are visually distinct and always cited, and every source is verifiable.</p>
+        <p>It is currently in closed beta. If you'd like access, <a href="/theo/support">get in touch</a>. The motivation behind the project is on the <a href="/theo/welcome">welcome page</a>.</p>
+      </section>
 
+      <section>
+        <h2>Learn More</h2>
+        <ul class="link-cards">
+          <li class="link-card">
+            <a href="/theo/how-it-works">How It Works</a>
+            <p>Response structure, the theologians, core invariants, trust language, and the stack</p>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Legal &amp; Support</h2>
         <ul class="link-cards">
           <li class="link-card">
             <a href="/theo/privacy">Privacy Policy</a>
@@ -46,7 +65,7 @@
           </li>
           <li class="link-card">
             <a href="/theo/support">Support</a>
-            <p>Get help and contact us</p>
+            <p>Get help, request beta access, or share feedback</p>
           </li>
         </ul>
       </section>
@@ -55,6 +74,7 @@
     <footer class="site-footer">
       <ul class="footer-links">
         <li><a href="/theo/welcome">Welcome</a></li>
+        <li><a href="/theo/how-it-works">How It Works</a></li>
         <li><a href="/theo/privacy">Privacy</a></li>
         <li><a href="/theo/terms">Terms</a></li>
         <li><a href="/theo/support">Support</a></li>

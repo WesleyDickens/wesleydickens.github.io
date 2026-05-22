@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Session Analytics — Wesley Dickens</title>
+  <meta name="description" content="A local-first analytics dashboard for Claude Code session logs. Token usage, subagent accounting, and anomaly detection over your JSONL session files.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/tokens.css">
+  <link rel="stylesheet" href="/claude-session-analysis/styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="proj-header">
+      <div class="proj-header-inner">
+        <a href="/" class="back-link">&larr; Wesley Dickens</a>
+      </div>
+    </header>
+
+    <main class="proj-main">
+      <section class="proj-intro">
+        <p class="proj-eyebrow">Open Source &middot; TypeScript</p>
+        <h1 class="proj-title">Claude Session Analytics</h1>
+        <p class="proj-lede">A local-first analytics dashboard for <a href="https://docs.anthropic.com/en/docs/claude-code" rel="noopener" target="_blank">Claude Code</a> session logs. Ingests JSONL files, stores structured data in SQLite, and serves an interactive UI for exploring token consumption, tool usage, subagent behavior, and anomaly detection.</p>
+
+        <div class="proj-actions">
+          <a href="https://github.com/WesleyDickens/claude-session-analysis" class="btn btn-primary" rel="noopener" target="_blank">
+            View on GitHub
+            <span class="btn-arrow">&#x2197;</span>
+          </a>
+          <a href="https://github.com/WesleyDickens/claude-session-analysis#quick-start" class="btn btn-ghost" rel="noopener" target="_blank">
+            Quick Start
+          </a>
+        </div>
+      </section>
+
+      <hr class="accent-rule">
+
+      <section>
+        <h2 class="section-heading">Features</h2>
+        <ul class="feature-grid">
+          <li class="feature">
+            <h3>Token analytics</h3>
+            <p>Input, output, cache creation, and cache read tokens across sessions, projects, and models.</p>
+          </li>
+          <li class="feature">
+            <h3>Subagent accounting</h3>
+            <p>Distinguish top-level vs rolled-up token counts so subagent cost lands on the right session.</p>
+          </li>
+          <li class="feature">
+            <h3>Anomaly badges</h3>
+            <p>Automatic flags for sessions above project P90, subagent-heavy, cache-build-heavy, spike requests, or tool loops.</p>
+          </li>
+          <li class="feature">
+            <h3>Rich filtering</h3>
+            <p>Filter by project, model, Claude version, git branch, tool, date range, or free text. URL-persisted for sharing.</p>
+          </li>
+          <li class="feature">
+            <h3>Visualizations</h3>
+            <p>Token trend charts, project/model breakdowns, top tools tables, and session scatter plots via Recharts.</p>
+          </li>
+          <li class="feature">
+            <h3>Session deep-dive</h3>
+            <p>Browse every request in a session with subagent breakdown, tool calls, and fragment-level detail.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="section-heading">How it works</h2>
+        <p class="section-body">Claude Code writes JSONL session logs to <code>~/.claude/projects/</code>. The tool scans that directory, parses events, deduplicates assistant messages by request ID, and stores structured data in a local SQLite database. A Fastify API serves the data to a React SPA.</p>
+
+        <pre class="code-block"><code>~/.claude/projects/
+&#9500;&#9472;&#9472; &lt;project&gt;/
+&#9474;   &#9500;&#9472;&#9472; &lt;session-id&gt;.jsonl              # main session log
+&#9474;   &#9492;&#9472;&#9472; &lt;session-id&gt;/subagents/
+&#9474;       &#9500;&#9472;&#9472; agent-&lt;id&gt;.jsonl            # subagent log
+&#9474;       &#9492;&#9472;&#9472; agent-&lt;id&gt;.meta.json        # agent metadata</code></pre>
+      </section>
+
+      <section>
+        <h2 class="section-heading">Tech stack</h2>
+        <ul class="stack-list">
+          <li><span class="stack-label">Server</span><span class="stack-value">Fastify &middot; Node <code>node:sqlite</code></span></li>
+          <li><span class="stack-label">Client</span><span class="stack-value">React 19 &middot; React Router 7 &middot; Recharts</span></li>
+          <li><span class="stack-label">Build</span><span class="stack-value">Vite &middot; TypeScript 5.7</span></li>
+          <li><span class="stack-label">Test</span><span class="stack-value">Vitest &middot; React Testing Library</span></li>
+          <li><span class="stack-label">License</span><span class="stack-value">MIT</span></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer proj-footer">
+      <p>&copy; 2026 Wesley Dickens</p>
+    </footer>
+  </div>
+</body>
+</html>

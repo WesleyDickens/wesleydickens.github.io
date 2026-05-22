@@ -4,32 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wesley Dickens</title>
-  <meta name="description" content="Wesley Dickens - Developer & Creator">
+  <meta name="description" content="Wesley Dickens — data infrastructure consultant, builder of small, careful software.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/tokens.css">
   <link rel="stylesheet" href="/styles.css">
 </head>
-<body>
-  <div class="hero">
-    <div class="hero-inner">
-      <h1 class="hero-name">Wesley Dickens</h1>
-      <p class="hero-tagline">Developer & Creator</p>
+<body class="home">
+  <main class="masthead">
 
-      <hr class="hero-rule">
+    <header class="mast-head">
+      <span class="mast-eyebrow">Wesley Dickens &mdash; New York</span>
+      <h1 class="mast-name">Wesley<br><em>Dickens</em></h1>
+      <p class="mast-blurb">Data infrastructure consultant. Currently building small, careful software with LLMs as part of the stack.</p>
+    </header>
 
-      <section>
-        <h2 class="projects-heading">Projects</h2>
-        <a href="/theo/" class="project-card">
-          <span class="project-card-name">Theo</span>
-          <p class="project-card-desc">Theologian-attributed responses to your questions</p>
-        </a>
-      </section>
-    </div>
-  </div>
+    <section class="index" aria-labelledby="idx-projects">
+      <h2 id="idx-projects" class="index-heading"><span>Projects</span></h2>
+      <ol class="index-list">
+        <li class="index-item">
+          <a href="/theo/" class="index-link">
+            <span class="index-num">01</span>
+            <span class="index-title">Theo</span>
+            <span class="index-desc">Theologian-attributed responses to your questions</span>
+            <span class="index-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+        <li class="index-item">
+          <a href="/claude-session-analysis/" class="index-link">
+            <span class="index-num">02</span>
+            <span class="index-title">Claude Session Analytics</span>
+            <span class="index-desc">Local-first analytics for Claude Code session logs</span>
+            <span class="index-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+      </ol>
+    </section>
 
-  <footer class="site-footer">
-    <p>&copy; 2026 Wesley Dickens</p>
-  </footer>
+    <section class="index" aria-labelledby="idx-about">
+      <h2 id="idx-about" class="index-heading"><span>About</span></h2>
+      <ol class="index-list">
+        <li class="index-item">
+          <a href="/background/" class="index-link">
+            <span class="index-num">&sect;</span>
+            <span class="index-title">Background &amp; experience</span>
+            <span class="index-desc">Nine years of data infrastructure, now applied to AI implementation work</span>
+            <span class="index-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+      </ol>
+    </section>
+
+    <footer class="mast-foot">
+      <p>
+        <span>&copy; 2026</span>
+        <span class="mast-foot-sep">&middot;</span>
+        <a href="mailto:me@wesleydickens.com" class="mast-foot-link">me@wesleydickens.com</a>
+      </p>
+    </footer>
+
+  </main>
 </body>
 </html>
