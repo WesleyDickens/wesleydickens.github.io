@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Theo — Theologian-attributed Q&A</title>
+  <title>Theo &mdash; Theologian-attributed Q&A</title>
   <meta name="description" content="Theo is an iOS app for asking theological questions and receiving structured, source-cited responses attributed to Augustine, Aquinas, Luther, Calvin, or C.S. Lewis. Currently in closed beta.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,22 +13,9 @@
 </head>
 <body>
   <div class="page">
-    <header class="site-header">
-      <div class="header-inner">
-        <div class="header-left">
-          <a href="/" class="back-link">&larr; Wesley Dickens</a>
-          <a href="/theo/" class="brand">Theo</a>
-        </div>
-        <nav aria-label="Site pages">
-          <ul class="site-nav">
-            <li><a href="/theo/welcome">Welcome</a></li>
-            <li><a href="/theo/how-it-works">How It Works</a></li>
-            <li><a href="/theo/privacy">Privacy</a></li>
-            <li><a href="/theo/terms">Terms</a></li>
-            <li><a href="/theo/support">Support</a></li>
-          </ul>
-        </nav>
-      </div>
+    <header class="theo-mast">
+      <a href="/" class="theo-back">Wesley Dickens</a>
+      <a href="/theo/" class="theo-brand">Theo</a>
     </header>
 
     <main class="content">
@@ -42,6 +29,8 @@
         <p>It is currently in closed beta. If you'd like access, <a href="/theo/support">get in touch</a>. The motivation behind the project is on the <a href="/theo/welcome">welcome page</a>.</p>
       </section>
 
+      <hr class="theo-rule">
+
       <section>
         <h2>Learn More</h2>
         <ul class="link-cards">
@@ -52,18 +41,23 @@
         </ul>
       </section>
 
+      <hr class="theo-rule">
+
       <section>
         <h2>Legal &amp; Support</h2>
-        <ul class="link-cards">
+        <ul class="link-cards link-cards--numbered">
           <li class="link-card">
+            <span class="link-card-num">01</span>
             <a href="/theo/privacy">Privacy Policy</a>
             <p>How we collect, use, and protect your data</p>
           </li>
           <li class="link-card">
+            <span class="link-card-num">02</span>
             <a href="/theo/terms">Terms of Service</a>
             <p>Terms and conditions for using Theo</p>
           </li>
           <li class="link-card">
+            <span class="link-card-num">03</span>
             <a href="/theo/support">Support</a>
             <p>Get help, request beta access, or share feedback</p>
           </li>
@@ -71,15 +65,20 @@
       </section>
     </main>
 
-    <footer class="site-footer">
-      <ul class="footer-links">
-        <li><a href="/theo/welcome">Welcome</a></li>
-        <li><a href="/theo/how-it-works">How It Works</a></li>
-        <li><a href="/theo/privacy">Privacy</a></li>
-        <li><a href="/theo/terms">Terms</a></li>
-        <li><a href="/theo/support">Support</a></li>
-      </ul>
-      <p class="copyright">&copy; 2026 Theo. All rights reserved.</p>
+    <footer class="theo-foot">
+      <nav class="theo-foot-nav" aria-label="Theo">
+        <a href="/theo/" aria-current="page">Overview</a>
+        <a href="/theo/welcome">Welcome</a>
+        <a href="/theo/how-it-works">How It Works</a>
+        <a href="/theo/privacy">Privacy</a>
+        <a href="/theo/terms">Terms</a>
+        <a href="/theo/support">Support</a>
+      </nav>
+      <p class="theo-foot-meta">
+        <span>&copy; 2026</span>
+        <span class="theo-foot-sep">&middot;</span>
+        <span>Theo, by <a href="/">Wesley Dickens</a></span>
+      </p>
     </footer>
   </div>
 </body>

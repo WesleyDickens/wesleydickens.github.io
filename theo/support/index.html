@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support - Theo</title>
+  <title>Support &mdash; Theo</title>
   <meta name="description" content="Get help with Theo iOS app - contact form and frequently asked questions">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,22 +13,9 @@
 </head>
 <body>
   <div class="page">
-    <header class="site-header">
-      <div class="header-inner">
-        <div class="header-left">
-          <a href="/" class="back-link">&larr; Wesley Dickens</a>
-          <a href="/theo/" class="brand">Theo</a>
-        </div>
-        <nav aria-label="Legal pages">
-          <ul class="site-nav">
-            <li><a href="/theo/welcome">Welcome</a></li>
-            <li><a href="/theo/how-it-works">How It Works</a></li>
-            <li><a href="/theo/privacy">Privacy</a></li>
-            <li><a href="/theo/terms">Terms</a></li>
-            <li><a href="/theo/support" class="is-active">Support</a></li>
-          </ul>
-        </nav>
-      </div>
+    <header class="theo-mast">
+      <a href="/" class="theo-back">Wesley Dickens</a>
+      <a href="/theo/" class="theo-brand">Theo</a>
     </header>
 
     <main class="content">
@@ -38,7 +25,7 @@
 
       <section id="contact">
         <h2>Contact Us</h2>
-        <p>Fill out the form below and we'll get back to you within 24-48 hours.</p>
+        <p>Fill out the form below and we'll get back to you within 24&ndash;48 hours.</p>
 
         <form action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="8f9d4891-8cb4-4669-921d-fa5f3cc4f6ee">
@@ -75,6 +62,8 @@
           <button type="submit" class="btn-submit">Send Message</button>
         </form>
       </section>
+
+      <hr class="theo-rule">
 
       <section id="faq">
         <h2>Frequently Asked Questions</h2>
@@ -137,7 +126,7 @@
           <p>If you're experiencing issues with receiving responses, try these troubleshooting steps:</p>
           <ul>
             <li><strong>Check your internet connection:</strong> The app requires an active internet connection to generate responses</li>
-            <li><strong>Verify your subscription:</strong> Premium features require an active subscription. Check Settings > Account > Subscription Status</li>
+            <li><strong>Verify your subscription:</strong> Premium features require an active subscription. Check Settings &gt; Account &gt; Subscription Status</li>
             <li><strong>Restart the app:</strong> Close the app completely and reopen it</li>
             <li><strong>Update the app:</strong> Make sure you have the latest version from the App Store</li>
             <li><strong>Check Apple's server status:</strong> Visit <a href="https://www.apple.com/support/systemstatus/" target="_blank" rel="noopener noreferrer">apple.com/support/systemstatus</a></li>
@@ -188,30 +177,37 @@
 
         <details>
           <summary>I have a different question</summary>
-          <p>If your question isn't answered here, please use the contact form above to reach out to our support team. We typically respond within 24-48 hours.</p>
+          <p>If your question isn't answered here, please use the contact form above to reach out to our support team. We typically respond within 24&ndash;48 hours.</p>
         </details>
       </section>
+
+      <hr class="theo-rule">
 
       <section id="additional-resources">
         <h2>Additional Resources</h2>
         <ul>
-          <li><a href="/theo/privacy">Privacy Policy</a> - How we handle your data</li>
-          <li><a href="/theo/terms">Terms of Service</a> - Terms and conditions for using Theo</li>
-          <li><a href="https://www.apple.com/support/systemstatus/" target="_blank" rel="noopener noreferrer">Apple System Status</a> - Check if Apple services are experiencing issues</li>
-          <li><a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer">Apple Report a Problem</a> - Request refunds for App Store purchases</li>
+          <li><a href="/theo/privacy">Privacy Policy</a> &mdash; How we handle your data</li>
+          <li><a href="/theo/terms">Terms of Service</a> &mdash; Terms and conditions for using Theo</li>
+          <li><a href="https://www.apple.com/support/systemstatus/" target="_blank" rel="noopener noreferrer">Apple System Status</a> &mdash; Check if Apple services are experiencing issues</li>
+          <li><a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer">Apple Report a Problem</a> &mdash; Request refunds for App Store purchases</li>
         </ul>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <ul class="footer-links">
-        <li><a href="/theo/welcome">Welcome</a></li>
-        <li><a href="/theo/how-it-works">How It Works</a></li>
-        <li><a href="/theo/privacy">Privacy</a></li>
-        <li><a href="/theo/terms">Terms</a></li>
-        <li><a href="/theo/support">Support</a></li>
-      </ul>
-      <p class="copyright">&copy; 2026 Theo. All rights reserved.</p>
+    <footer class="theo-foot">
+      <nav class="theo-foot-nav" aria-label="Theo">
+        <a href="/theo/">Overview</a>
+        <a href="/theo/welcome">Welcome</a>
+        <a href="/theo/how-it-works">How It Works</a>
+        <a href="/theo/privacy">Privacy</a>
+        <a href="/theo/terms">Terms</a>
+        <a href="/theo/support" aria-current="page">Support</a>
+      </nav>
+      <p class="theo-foot-meta">
+        <span>&copy; 2026</span>
+        <span class="theo-foot-sep">&middot;</span>
+        <span>Theo, by <a href="/">Wesley Dickens</a></span>
+      </p>
     </footer>
   </div>
 </body>

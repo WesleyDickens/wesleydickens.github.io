@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How It Works - Theo</title>
+  <title>How It Works &mdash; Theo</title>
   <meta name="description" content="How Theo works: structured response segments, the theologians, core invariants, trust language, and the technology stack.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,22 +13,9 @@
 </head>
 <body>
   <div class="page">
-    <header class="site-header">
-      <div class="header-inner">
-        <div class="header-left">
-          <a href="/" class="back-link">&larr; Wesley Dickens</a>
-          <a href="/theo/" class="brand">Theo</a>
-        </div>
-        <nav aria-label="Site pages">
-          <ul class="site-nav">
-            <li><a href="/theo/welcome">Welcome</a></li>
-            <li><a href="/theo/how-it-works" class="is-active">How It Works</a></li>
-            <li><a href="/theo/privacy">Privacy</a></li>
-            <li><a href="/theo/terms">Terms</a></li>
-            <li><a href="/theo/support">Support</a></li>
-          </ul>
-        </nav>
-      </div>
+    <header class="theo-mast">
+      <a href="/" class="theo-back">Wesley Dickens</a>
+      <a href="/theo/" class="theo-brand">Theo</a>
     </header>
 
     <main class="content">
@@ -48,6 +35,8 @@
         <p>Quotes are verified before display through a multi-stage grounding pipeline. If a citation can't be produced, the quote is omitted rather than fabricated.</p>
       </section>
 
+      <hr class="theo-rule">
+
       <section>
         <h2>The Theologians</h2>
         <p>Each avatar comes with a profile describing their tradition, characteristic reasoning modes, the kinds of questions they engage well, and acknowledged limits. Conversations are bound to a single theologian &mdash; switching avatars starts a new conversation so context never bleeds between voices.</p>
@@ -59,6 +48,8 @@
           <li><strong>C.S. Lewis</strong> &mdash; apologetics, suffering, imagination, the moral argument.</li>
         </ul>
       </section>
+
+      <hr class="theo-rule">
 
       <section>
         <h2>Core Invariants</h2>
@@ -72,10 +63,14 @@
         </ul>
       </section>
 
+      <hr class="theo-rule">
+
       <section>
         <h2>Trust Language</h2>
         <p>User-facing uncertainty is expressed in evidence tiers &mdash; <em>well-supported</em>, <em>partially supported</em>, <em>interpretive</em> &mdash; not numeric probabilities. The aim is for the interface to be honest about what it does and doesn't know without inventing precision it can't justify.</p>
       </section>
+
+      <hr class="theo-rule">
 
       <section>
         <h2>Stack</h2>
@@ -88,15 +83,20 @@
       </section>
     </main>
 
-    <footer class="site-footer">
-      <ul class="footer-links">
-        <li><a href="/theo/welcome">Welcome</a></li>
-        <li><a href="/theo/how-it-works">How It Works</a></li>
-        <li><a href="/theo/privacy">Privacy</a></li>
-        <li><a href="/theo/terms">Terms</a></li>
-        <li><a href="/theo/support">Support</a></li>
-      </ul>
-      <p class="copyright">&copy; 2026 Theo. All rights reserved.</p>
+    <footer class="theo-foot">
+      <nav class="theo-foot-nav" aria-label="Theo">
+        <a href="/theo/">Overview</a>
+        <a href="/theo/welcome">Welcome</a>
+        <a href="/theo/how-it-works" aria-current="page">How It Works</a>
+        <a href="/theo/privacy">Privacy</a>
+        <a href="/theo/terms">Terms</a>
+        <a href="/theo/support">Support</a>
+      </nav>
+      <p class="theo-foot-meta">
+        <span>&copy; 2026</span>
+        <span class="theo-foot-sep">&middot;</span>
+        <span>Theo, by <a href="/">Wesley Dickens</a></span>
+      </p>
     </footer>
   </div>
 </body>

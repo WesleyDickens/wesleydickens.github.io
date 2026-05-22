@@ -21,26 +21,36 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 3rem;
-      height: 3rem;
-      margin: 0 auto 1.5rem;
+      width: 2.75rem;
+      height: 2.75rem;
+      margin: 0 auto 1.75rem;
       border: 1px solid var(--accent);
       color: var(--accent-ink);
       border-radius: 50%;
       font-family: var(--font-display);
-      font-size: 1.25rem;
+      font-size: 1.1rem;
     }
 
-    .confirmation h2 {
+    .confirmation .eyebrow {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--ink-faint);
+      margin-bottom: 0.85rem;
+    }
+
+    .confirmation h1 {
       font-family: var(--font-display);
       font-variation-settings: 'opsz' 36;
       font-size: clamp(1.75rem, 4vw, 2.25rem);
       font-weight: 500;
       letter-spacing: -0.02em;
       color: var(--ink-strong);
-      border: none;
-      padding: 0;
       margin: 0 0 0.75rem;
+      line-height: 1.1;
     }
 
     .confirmation p {
@@ -59,14 +69,11 @@
     <main class="content">
       <section class="confirmation">
         <div class="icon" aria-hidden="true">&#10003;</div>
-        <h2>Email Confirmed</h2>
+        <span class="eyebrow">Theo</span>
+        <h1>Email confirmed</h1>
         <p>Your account has been verified. You can now open Theo and sign in.</p>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <p class="copyright">&copy; 2026 Theo. All rights reserved.</p>
-    </footer>
   </div>
 </body>
 </html>
