@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Confirmed &mdash; Theo</title>
+  <meta name="description" content="Your Theo account email has been confirmed">
+  <meta property="og:title" content="Email Confirmed — Theo">
+  <meta property="og:description" content="Your Theo account email has been confirmed">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wesleydickens.com/theo/confirmed/">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/tokens.css">
+  <link rel="stylesheet" href="/theo/styles.css">
+  <style>
+    .confirmation {
+      max-width: 32rem;
+      margin: clamp(3rem, 10vw, 6rem) auto 0;
+      text-align: center;
+    }
+
+    .confirmation .icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      margin: 0 auto 1.75rem;
+      border: 1px solid var(--accent);
+      color: var(--accent-ink);
+      border-radius: 50%;
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+    }
+
+    .confirmation .eyebrow {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--ink-faint);
+      margin-bottom: 0.85rem;
+    }
+
+    .confirmation h1 {
+      font-family: var(--font-display);
+      font-variation-settings: 'opsz' 36;
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: var(--ink-strong);
+      margin: 0 0 0.75rem;
+      line-height: 1.1;
+    }
+
+    .confirmation p {
+      font-family: var(--font-display);
+      font-variation-settings: 'opsz' 18;
+      font-size: 1.0625rem;
+      line-height: 1.55;
+      color: var(--ink-muted);
+      max-width: 28em;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <main class="content">
+      <section class="confirmation">
+        <div class="icon" aria-hidden="true">&#10003;</div>
+        <span class="eyebrow">Theo</span>
+        <h1>Email confirmed</h1>
+        <p>Your account has been verified. You can now open Theo and sign in.</p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

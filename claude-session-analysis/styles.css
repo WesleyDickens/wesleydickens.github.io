@@ -1,0 +1,161 @@
+/* ═══════════════════════════════════════════════════════════
+   Claude Session Analytics — project-page overrides
+   Loaded after /tokens.css and /styles.css.
+   Root classes (bg-back, bg-kicker, bg-title, bg-lede,
+   bg-intro, bg-rule, bg-section, bg-section-heading,
+   bg-inline-link, bg-footer) come from /styles.css.
+   Only genuinely new patterns live here.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── bg-title: no max-width constraint on this page ─────── */
+.bg-title {
+  max-width: none;
+}
+
+/* ── Feature hairline-row list ──────────────────────────── */
+.csa-feature-list {
+  border-top: 1px solid var(--rule);
+}
+
+.csa-feature-item {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  column-gap: clamp(1rem, 2vw, 1.5rem);
+  align-items: baseline;
+  padding: 1.25rem 0.25rem 1.25rem 0;
+  border-bottom: 1px solid var(--rule);
+  transition: padding-left var(--dur-base) var(--ease-out);
+}
+
+@media (hover: hover) {
+  .csa-feature-item:hover {
+    padding-left: 0.6rem;
+  }
+
+  .csa-feature-item:hover .csa-feature-num,
+  .csa-feature-item:hover .csa-feature-name {
+    color: var(--accent-ink);
+  }
+}
+
+.csa-feature-num {
+  font-family: var(--font-display);
+  font-variation-settings: 'opsz' 14;
+  font-feature-settings: 'lnum', 'tnum';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--ink-faint);
+  align-self: start;
+  padding-top: 0.18em;
+  transition: color var(--dur-fast) ease;
+}
+
+.csa-feature-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.csa-feature-name {
+  font-family: var(--font-display);
+  font-variation-settings: 'opsz' 18;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: var(--ink-strong);
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  transition: color var(--dur-fast) ease;
+}
+
+.csa-feature-desc {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--ink-faint);
+}
+
+/* ── bg-section prose paragraphs ────────────────────────── */
+.bg-section > p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--ink-muted);
+  margin-bottom: 1.25rem;
+  max-width: 36em;
+}
+
+/* ── Code block ──────────────────────────────────────────── */
+.code-block {
+  background: var(--paper-soft);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+  padding: 1.1rem 1.35rem;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.65;
+  color: var(--ink-muted);
+  margin-top: 1.25rem;
+}
+
+.code-block code {
+  font-family: inherit;
+  color: inherit;
+  background: none;
+  padding: 0;
+  border: none;
+}
+
+/* ── Inline code ─────────────────────────────────────────── */
+.csa-inline-code {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--ink-strong);
+  background: var(--paper-soft);
+  padding: 0.1em 0.4em;
+  border-radius: 3px;
+}
+
+/* ── Tech stack hairline-row list ───────────────────────── */
+.csa-stack-list {
+  list-style: none;
+  border-top: 1px solid var(--rule);
+}
+
+.csa-stack-row {
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  gap: 1.25rem;
+  align-items: baseline;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.csa-stack-label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-faint);
+}
+
+.csa-stack-value {
+  font-family: var(--font-display);
+  font-variation-settings: 'opsz' 16;
+  font-size: 0.9375rem;
+  color: var(--ink-strong);
+  letter-spacing: -0.005em;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .csa-stack-row {
+    grid-template-columns: 5.5rem 1fr;
+    gap: 1rem;
+  }
+
+  .csa-feature-item {
+    grid-template-columns: 2.25rem minmax(0, 1fr);
+  }
+}

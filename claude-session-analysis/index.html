@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Session Analytics — Wesley Dickens</title>
+  <meta name="description" content="A local-first analytics dashboard for Claude Code session logs. Token usage, subagent accounting, and anomaly detection over your JSONL session files.">
+  <meta property="og:title" content="Claude Session Analytics — Wesley Dickens">
+  <meta property="og:description" content="A local-first analytics dashboard for Claude Code session logs. Token usage, subagent accounting, and anomaly detection over your JSONL session files.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wesleydickens.com/claude-session-analysis/">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/tokens.css">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/claude-session-analysis/styles.css">
+</head>
+<body class="bg-page">
+  <main class="bg-main">
+    <a href="/" class="bg-back">&larr; Wesley Dickens</a>
+
+    <header class="bg-header">
+      <span class="bg-kicker">Open Source &middot; TypeScript</span>
+      <h1 class="bg-title">Claude Session Analytics</h1>
+      <p class="bg-lede">
+        A local-first analytics dashboard for <a href="https://docs.anthropic.com/en/docs/claude-code" class="bg-inline-link" rel="noopener" target="_blank">Claude Code</a> session logs — available <a href="https://github.com/WesleyDickens/claude-session-analysis" class="bg-inline-link" rel="noopener" target="_blank">on GitHub</a>.
+      </p>
+      <div class="bg-intro">
+        <p>Ingests JSONL files, stores structured data in SQLite, and serves an interactive UI for exploring token consumption, tool usage, subagent behavior, and anomaly detection. Built to understand what Claude Code is actually doing at scale across sessions and projects.</p>
+      </div>
+    </header>
+
+    <hr class="bg-rule">
+
+    <section class="bg-section">
+      <h2 class="bg-section-heading">Features</h2>
+      <div class="csa-feature-list">
+        <div class="csa-feature-item">
+          <span class="csa-feature-num">01</span>
+          <div class="csa-feature-body">
+            <span class="csa-feature-name">Token analytics</span>
+            <span class="csa-feature-desc">Input, output, cache creation, and cache read tokens across sessions, projects, and models.</span>
+          </div>
+        </div>
+        <div class="csa-feature-item">
+          <span class="csa-feature-num">02</span>
+          <div class="csa-feature-body">
+            <span class="csa-feature-name">Subagent accounting</span>
+            <span class="csa-feature-desc">Distinguish top-level vs rolled-up token counts so subagent cost lands on the right session.</span>
+          </div>
+        </div>
+        <div class="csa-feature-item">
+          <span class="csa-feature-num">03</span>
+          <div class="csa-feature-body">
+            <span class="csa-feature-name">Anomaly detection</span>
+            <span class="csa-feature-desc">Automatic flags for sessions above project P90, subagent-heavy, cache-build-heavy, spike requests, or tool loops.</span>
+          </div>
+        </div>
+        <div class="csa-feature-item">
+          <span class="csa-feature-num">04</span>
+          <div class="csa-feature-body">
+            <span class="csa-feature-name">Rich filtering</span>
+            <span class="csa-feature-desc">Filter by project, model, Claude version, git branch, tool, date range, or free text. URL-persisted for sharing.</span>
+          </div>
+        </div>
+        <div class="csa-feature-item">
+          <span class="csa-feature-num">05</span>
+          <div class="csa-feature-body">
+            <span class="csa-feature-name">Visualizations</span>
+            <span class="csa-feature-desc">Token trend charts, project and model breakdowns, top tools tables, and session scatter plots.</span>
+          </div>
+        </div>
+        <div class="csa-feature-item">
+          <span class="csa-feature-num">06</span>
+          <div class="csa-feature-body">
+            <span class="csa-feature-name">Session deep-dive</span>
+            <span class="csa-feature-desc">Browse every request in a session with subagent breakdown, tool calls, and fragment-level detail.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="bg-rule">
+
+    <section class="bg-section">
+      <h2 class="bg-section-heading">How it works</h2>
+      <p>Claude Code writes JSONL session logs to <code class="csa-inline-code">~/.claude/projects/</code>. The tool scans that directory, parses events, deduplicates assistant messages by request ID, and stores structured data in a local SQLite database. A Fastify API serves the data to a React SPA.</p>
+
+      <pre class="code-block"><code>~/.claude/projects/
+&#9500;&#9472;&#9472; &lt;project&gt;/
+&#9474;   &#9500;&#9472;&#9472; &lt;session-id&gt;.jsonl              # main session log
+&#9474;   &#9492;&#9472;&#9472; &lt;session-id&gt;/subagents/
+&#9474;       &#9500;&#9472;&#9472; agent-&lt;id&gt;.jsonl            # subagent log
+&#9474;       &#9492;&#9472;&#9472; agent-&lt;id&gt;.meta.json        # agent metadata</code></pre>
+    </section>
+
+    <hr class="bg-rule">
+
+    <section class="bg-section bg-section-tight">
+      <h2 class="bg-section-heading">Tech stack</h2>
+      <ul class="csa-stack-list">
+        <li class="csa-stack-row">
+          <span class="csa-stack-label">Server</span>
+          <span class="csa-stack-value">Fastify &middot; Node <code class="csa-inline-code">node:sqlite</code></span>
+        </li>
+        <li class="csa-stack-row">
+          <span class="csa-stack-label">Client</span>
+          <span class="csa-stack-value">React 19 &middot; React Router 7 &middot; Recharts</span>
+        </li>
+        <li class="csa-stack-row">
+          <span class="csa-stack-label">Build</span>
+          <span class="csa-stack-value">Vite &middot; TypeScript 5.7</span>
+        </li>
+        <li class="csa-stack-row">
+          <span class="csa-stack-label">Test</span>
+          <span class="csa-stack-value">Vitest &middot; React Testing Library</span>
+        </li>
+        <li class="csa-stack-row">
+          <span class="csa-stack-label">License</span>
+          <span class="csa-stack-value">MIT</span>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="bg-footer">
+      <p>&copy; 2026 Wesley Dickens</p>
+    </footer>
+  </main>
+</body>
+</html>

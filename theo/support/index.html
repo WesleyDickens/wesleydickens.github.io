@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support &mdash; Theo</title>
+  <meta name="description" content="Beta access requests, bug reports, and feedback for Theo iOS app">
+  <meta property="og:title" content="Support — Theo">
+  <meta property="og:description" content="Beta access requests, bug reports, and feedback for Theo iOS app">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wesleydickens.com/theo/support/">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/tokens.css">
+  <link rel="stylesheet" href="/theo/styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="theo-mast">
+      <a href="/" class="theo-back">Wesley Dickens</a>
+      <a href="/theo/" class="theo-brand">Theo</a>
+    </header>
+
+    <main class="content">
+      <h1 class="page-title">Support</h1>
+      <p class="page-subtitle">Beta access requests, bug reports, and feedback.</p>
+      <hr class="accent-rule">
+
+      <section id="contact">
+        <h2>Get in touch</h2>
+        <p>I read every message. Reply within a few days.</p>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="8f9d4891-8cb4-4669-921d-fa5f3cc4f6ee">
+          <input type="hidden" name="subject" value="Theo Support Request">
+          <input type="hidden" name="from_name" value="Theo Support Form">
+
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+              <option value="">Select a category</option>
+              <option value="Beta Access">Beta Access</option>
+              <option value="Bug Report">Bug Report</option>
+              <option value="Feedback">Feedback</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required placeholder="What's going on?"></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+      </section>
+
+      <hr class="theo-rule">
+
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+
+        <details>
+          <summary>How accurate are the theologian responses?</summary>
+          <p>Responses are AI-generated interpretations grounded in what the theologians actually wrote &mdash; not fabricated quotes or invented citations. Every response passes through a verification pipeline that checks claims against real sources before surfacing them. You'll see citations you can follow up on.</p>
+          <p>That said, these are interpretations, not the theologians' actual words. For authoritative guidance, consult primary sources or a qualified pastor or scholar. See <a href="/theo/how-it-works" class="bg-inline-link">How It Works</a> for the full picture.</p>
+        </details>
+
+        <details>
+          <summary>Is my data secure?</summary>
+          <p>Yes. All data is encrypted in transit (HTTPS) and at rest. I use OAuth 2.0 authentication and do not sell personal information. See the <a href="/theo/privacy" class="bg-inline-link">Privacy Policy</a> for details.</p>
+        </details>
+
+        <details>
+          <summary>I have a different question</summary>
+          <p>Use the form above &mdash; I'll get back to you.</p>
+        </details>
+      </section>
+
+      <hr class="theo-rule">
+
+      <section id="additional-resources">
+        <h2>Additional Resources</h2>
+        <ul>
+          <li><a href="/theo/privacy" class="bg-inline-link">Privacy Policy</a> &mdash; How I handle your data</li>
+          <li><a href="/theo/terms" class="bg-inline-link">Terms of Service</a> &mdash; Terms and conditions for using Theo</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="theo-foot">
+      <nav class="theo-foot-nav" aria-label="Theo">
+        <a href="/theo/">Overview</a>
+        <a href="/theo/welcome">Welcome</a>
+        <a href="/theo/how-it-works">How It Works</a>
+        <a href="/theo/privacy">Privacy</a>
+        <a href="/theo/terms">Terms</a>
+        <a href="/theo/support" aria-current="page">Support</a>
+      </nav>
+      <p class="theo-foot-meta">
+        <span>&copy; 2026 Wesley Dickens</span>
+        <a href="mailto:me@wesleydickens.com">me@wesleydickens.com</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

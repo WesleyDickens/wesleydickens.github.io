@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How It Works &mdash; Theo</title>
+  <meta name="description" content="How Theo works: structured response segments, the theologians, core invariants, trust language, and the technology stack.">
+  <meta property="og:title" content="How It Works — Theo">
+  <meta property="og:description" content="How Theo works: structured response segments, the theologians, core invariants, trust language, and the technology stack.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wesleydickens.com/theo/how-it-works/">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/tokens.css">
+  <link rel="stylesheet" href="/theo/styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="theo-mast">
+      <a href="/" class="theo-back">Wesley Dickens</a>
+      <a href="/theo/" class="theo-brand">Theo</a>
+    </header>
+
+    <main class="content">
+      <h1 class="page-title">How It Works</h1>
+      <p class="page-subtitle">Response structure, theologians, invariants, and stack</p>
+      <hr class="accent-rule">
+
+      <section>
+        <h2>Response Structure</h2>
+        <p>Responses aren't plain text. Each one is a structured sequence of typed segments rendered differently in the UI:</p>
+        <ul>
+          <li><strong>Interpretation</strong> &mdash; third-person commentary on what the theologian believed or taught.</li>
+          <li><strong>Quote</strong> &mdash; direct quoted text, set apart visually, always accompanied by a citation.</li>
+          <li><strong>Citation</strong> &mdash; title, author, work, locator, and URL when available. Tappable for full source detail.</li>
+          <li><strong>Limitation</strong> &mdash; explicit acknowledgement when a question is out of scope or a source can't be found.</li>
+        </ul>
+        <p>Quotes are verified before display through a multi-stage grounding pipeline. If a citation can't be produced, the quote is omitted rather than fabricated.</p>
+      </section>
+
+      <hr class="theo-rule">
+
+      <section>
+        <h2>The Theologians</h2>
+        <p>Each avatar comes with a profile describing their tradition, characteristic reasoning modes, the kinds of questions they engage well, and acknowledged limits. Conversations are bound to a single theologian &mdash; switching avatars starts a new conversation so context never bleeds between voices.</p>
+        <ul>
+          <li><strong>Augustine of Hippo</strong> &mdash; grace, sin, the City of God, autobiographical reflection.</li>
+          <li><strong>Thomas Aquinas</strong> &mdash; faith and reason, natural theology, scholastic synthesis.</li>
+          <li><strong>Martin Luther</strong> &mdash; justification by faith, scripture, the freedom of a Christian.</li>
+          <li><strong>John Calvin</strong> &mdash; sovereignty, providence, systematic exposition.</li>
+          <li><strong>C.S. Lewis</strong> &mdash; apologetics, suffering, imagination, the moral argument.</li>
+        </ul>
+      </section>
+
+      <hr class="theo-rule">
+
+      <section>
+        <h2>Core Invariants</h2>
+        <p>The system enforces five rules server-side. They are non-negotiable:</p>
+        <ul>
+          <li><strong>Third-person only</strong> &mdash; the theologian is referenced, not impersonated. Authored text never uses first-person pronouns.</li>
+          <li><strong>Quotes always cited</strong> &mdash; uncitable quotes are dropped, not invented.</li>
+          <li><strong>Interpretation and quotes are separated</strong> &mdash; commentary and quoted text are distinct segments, never mixed in a single block.</li>
+          <li><strong>One avatar per conversation</strong> &mdash; switching theologians starts a new conversation.</li>
+          <li><strong>Engine swappability</strong> &mdash; the LLM provider lives behind an interface; the client and database schema don't change when it does.</li>
+        </ul>
+      </section>
+
+      <hr class="theo-rule">
+
+      <section>
+        <h2>Trust Language</h2>
+        <p>User-facing uncertainty is expressed in evidence tiers &mdash; <em>well-supported</em>, <em>partially supported</em>, <em>interpretive</em> &mdash; not numeric probabilities. The aim is for the interface to be honest about what it does and doesn't know without inventing precision it can't justify.</p>
+      </section>
+
+      <hr class="theo-rule">
+
+      <section>
+        <h2>Stack</h2>
+        <ul>
+          <li><strong>iOS client</strong> &mdash; SwiftUI, iOS 17+, Supabase Swift SDK.</li>
+          <li><strong>Server</strong> &mdash; Express + TypeScript, Zod validation, Vitest for tests.</li>
+          <li><strong>Database</strong> &mdash; Supabase PostgreSQL with pgvector for semantic search and pgsodium for encryption.</li>
+          <li><strong>AI</strong> &mdash; Google Gemini with grounding via <code>googleSearch</code>, abstracted behind a provider interface so the engine can be swapped without touching the client.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="theo-foot">
+      <nav class="theo-foot-nav" aria-label="Theo">
+        <a href="/theo/">Overview</a>
+        <a href="/theo/welcome">Welcome</a>
+        <a href="/theo/how-it-works" aria-current="page">How It Works</a>
+        <a href="/theo/privacy">Privacy</a>
+        <a href="/theo/terms">Terms</a>
+        <a href="/theo/support">Support</a>
+      </nav>
+      <p class="theo-foot-meta">
+        <span>&copy; 2026 Wesley Dickens</span>
+        <a href="mailto:me@wesleydickens.com">me@wesleydickens.com</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
