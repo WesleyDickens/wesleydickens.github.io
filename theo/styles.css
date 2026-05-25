@@ -643,7 +643,6 @@ details > *:not(summary):first-of-type {
 /* Print ──────────────────────────────────────────────────── */
 @media print {
   .theo-mast, .theo-foot { display: none; }
-  body::before { display: none; }
   body { color: #111; background: #fff; }
   a { color: #111; border-bottom: none; text-decoration: underline; }
   .content { max-width: 100%; padding: 0; }
