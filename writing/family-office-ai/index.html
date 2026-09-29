@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI in a family office’s shared systems — Wesley Dickens</title>
+  <meta name="description" content="A capital call and a dinner reservation can arrive in the same mailbox. Start with the records the office can separate and keep current.">
+  <meta property="og:title" content="AI in a family office’s shared systems — Wesley Dickens">
+  <meta property="og:description" content="A capital call and a dinner reservation can arrive in the same mailbox. Start with the records the office can separate and keep current.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://wesleydickens.com/writing/family-office-ai/">
+  <meta name="twitter:card" content="summary">
+  <meta property="article:published_time" content="2026-07-01">
+  <meta name="author" content="Wesley Dickens">
+  <link rel="canonical" href="https://wesleydickens.com/writing/family-office-ai/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/tokens.css">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/writing/styles.css">
+</head>
+<body class="bg-page">
+  <main class="bg-main">
+    <a href="/writing/" class="bg-back">&larr; Writing</a>
+
+    <article class="wr-article">
+      <header class="wr-article-header">
+        <div class="wr-meta">
+          <time datetime="2026-07-01">July 1, 2026</time>
+          <span class="wr-meta-sep">&middot;</span>
+          <span>6 min read</span>
+        </div>
+        <h1 class="wr-title">AI in a family office’s shared systems</h1>
+        <p class="wr-dek">A capital call and a dinner reservation can arrive in the same mailbox. Start with the records the office can separate and keep current.</p>
+      </header>
+
+      <div class="wr-body">
+        <p>A family office may keep a ground lease, the pool contractor’s invoice, an estate plan, and a passport scan on the same drive. The assistant handling a capital call may also handle a dinner reservation. Separating business records from household records takes work because the people doing the jobs need both.</p>
+        <p>That makes a broad connection to the drive or mailbox a poor starting point for an AI tool. The useful question is which part of the work can be separated without asking the office to reorganize everything it does.</p>
+        <p>I once asked a six-person office who could read the principal’s email. The answer took a week to assemble from three people’s memories and an admin-console screenshot. There were five names; one belonged to someone who had left two years earlier. No incident had prompted a review. The proposed connection brought the question up.</p>
+        <h2>Several jobs share the same systems</h2>
+        <p>An office this size may have a COO, a controller, an investment-operations person, an executive assistant, a property manager, and someone part-time on bill pay. Tax, legal, custody, and IT work may be outsourced. The same small team handles capital calls, tax questions, properties, and household expenses.</p>
+        <p>An outside IT provider may administer both the office systems and the household network. That arrangement can work well, but someone still needs responsibility for reviewing access as staff and duties change. It is easy for that work to fall between the provider and the office if neither has explicitly taken it on.</p>
+        <p>The consequences of exposing these records can be personal. A travel itinerary identifies where the family will be on particular dates. School correspondence may identify a child’s location. Even a calendar entry naming a doctor or lawyer reveals a relationship without opening the underlying file.</p>
+        <p>The people whose information appears in those records may also disagree about a tool. The principal’s enthusiasm does not resolve the children’s concerns, or a staff member’s question about whether an efficiency project will change their job. Those conversations belong in the decision about what the office will use.</p>
+        <h2>A separate address for a limited job</h2>
+        <p>The executive assistant’s mailbox is an attractive source because much of the administrative work passes through it. It can also contain family correspondence, medical appointments, wire instructions, and old credentials. Delegated access and send-as rights may extend what a connected application can reach or do, depending on the permissions granted to the application.</p>
+        <p>Before making that connection, have the person administering the systems review the existing grants and the application’s requested permissions. The <a href="/writing/permissions-decision/">access-scoping questions</a> apply here, but the mixed contents make the choice of mailbox especially consequential.</p>
+        <div class="wr-callout">
+        <span class="wr-callout-label">Review before connecting</span>
+        <ul>
+        <li>Full access grants on every mailbox, including unused ones</li>
+        <li>Send-as and send-on-behalf rights</li>
+        <li>Calendar delegates and auto-forwarding rules</li>
+        <li>Legacy shared mailboxes</li>
+        <li>Files set to “anyone with the link”</li>
+        </ul>
+        </div>
+        <p>I would start with a dedicated address for approved material, such as selected custodian statements, invoices, or capital call notices. Route the chosen correspondence there and connect the tool to that mailbox. Confirm that its actual permissions match the intended scope.</p>
+        <p>This leaves some useful context behind. Someone will need to select the correspondence and handle messages that mix approved material with private family information. That is an operating cost to weigh against the time saved. It is also a more specific job than asking staff to judge the contents of the entire assistant’s mailbox after a tool has been connected.</p>
+        <p>For documents, use a separate location containing the files approved for the task. Identify who may add material to it. An exclusion list on a mixed drive needs continuing attention as folders change; a small approved collection makes the review easier to understand.</p>
+        <h2>What I would keep outside the initial rollout</h2>
+        <p>These are the boundaries I would propose for an office’s first deployment. Agree them with the people responsible for the work and make clear that approval to summarize one kind of document does not authorize the next use automatically.</p>
+        <ul>
+        <li><strong>Payments.</strong> Keep payment initiation, approval, and pre-filling out of the assistant’s tasks. Preserve the existing callback verification process using a number from the office’s own records. The deepfake payment case cited below illustrates why a familiar face on a call cannot be the only check.<sup class="wr-fn"><a href="#src-5">5</a></sup></li>
+        <li><strong>External actions.</strong> Require human approval before sending email, portal messages, calendar invites, or signature requests. The same applies to sharing and deleting files.</li>
+        <li><strong>Private family records.</strong> Keep children’s school, medical, and custody records, family and staff medical files, and estate plans out of the hosted assistant.</li>
+        <li><strong>Tax and legal judgments.</strong> Extracting information from a K-1 does not authorize the tool to decide basis or deductibility. Keep those judgments with the professionals responsible for them.</li>
+        <li><strong>Documents that will be relied on outside the office.</strong> A summary or draft must not bypass the review required for a signed agreement, filing, or communication to a counterparty. The reported cases involving invented legal citations are a reason to preserve that review.<sup class="wr-fn"><a href="#src-4">4</a></sup></li>
+        </ul>
+        <p>A local model is a separate proposal for material excluded from hosted tools. Keeping processing local does not itself settle whether the office should process a medical file or a child’s records. Decide that use with the family and the relevant advisers before considering a setup. Do not treat a local installation as an exception to the agreed scope.</p>
+        <h2>Check the obligations attached to the documents</h2>
+        <p>The SEC’s family-office exclusion concerns investment-adviser status.<sup class="wr-fn"><a href="#src-3">3</a></sup> It does not answer whether a particular document may be shared with an AI vendor. Read the confidentiality terms in fund documents before uploading an LPA. Ask counsel which files require special handling, which are privileged, and which obligations apply to the proposed use.</p>
+        <p>Then describe the arrangement to the family in plain language: which documents, which provider, who can use the tool, and what it is allowed to do. Their agreement is part of the decision alongside the legal and contractual requirements.</p>
+        <p>Existing cloud use can help make the conversation concrete. Deloitte’s 2024 survey of 354 single family offices found 87 percent already using cloud applications.<sup class="wr-fn"><a href="#src-1">1</a></sup> Using a custodian portal or hosted email does not approve a new provider. It gives the office an existing arrangement to compare against when discussing access and terms.</p>
+        <h2>A first workflow someone can maintain</h2>
+        <p>Begin with a document an employee is already working through, such as an approved ground lease or umbrella policy with riders. Have them upload that document into the approved tool and check the answer against the source. This lets the office try the task without connecting a drive.</p>
+        <p>Citi’s May 2026 discussions with family offices identified lack of internal expertise as a leading barrier to adoption.<sup class="wr-fn"><a href="#src-2">2</a></sup> In a small office, someone has to maintain the workflow alongside their existing responsibilities. A trial should establish whether the checking and administration are manageable as well as whether the tool produces a useful answer.</p>
+        <p>If that works, consider one connection to a location built for the purpose. Renewal dates proposed into a tracker the COO already reviews are a possible next step. At ninety days, review actual use and the effort required to keep the approved collection current. Expand only if the office can sustain that work.</p>
+      </div>
+      <section class="wr-sources"><div class="wr-sources-label">Sources</div><ol><li id="src-1">Deloitte Private, <em>The Family Office Insights Series: Digital Transformation of Family Office Operations</em> (2024) — 354 single family offices surveyed; 87% use cloud-based applications. <a href="https://www.deloitte.com/global/en/services/deloitte-private/research/family-office-insights-series.html">https://www.deloitte.com/global/en/services/deloitte-private/research/family-office-insights-series.html</a></li><li id="src-2">Citi Institute, <em>AI in the Family Office: Privacy, Efficiency and Institutional Rigor</em> (May 2026) — qualitative discussions with single-family-office principals and CIOs; lack of internal expertise cited as the leading barrier to adoption. <a href="https://www.citigroup.com/global/insights/ai-in-the-family-office">https://www.citigroup.com/global/insights/ai-in-the-family-office</a></li><li id="src-3">SEC Rule 202(a)(11)(G)-1, the family office exclusion, adopted 22 June 2011. <a href="https://www.sec.gov/files/rules/final/2011/ia-3220.pdf">https://www.sec.gov/files/rules/final/2011/ia-3220.pdf</a></li><li id="src-4">“Why Lawyers Keep Citing Fake Cases Invented by AI,” <em>Scientific American</em>, 22 May 2026 — over 1,400 cases in which courts addressed AI-generated errors in the preceding three years. <a href="https://www.scientificamerican.com/article/why-lawyers-keep-citing-fake-cases-invented-by-ai/">https://www.scientificamerican.com/article/why-lawyers-keep-citing-fake-cases-invented-by-ai/</a></li><li id="src-5">“Finance worker pays out $25 million after video call with deepfake ‘chief financial officer’,” CNN, 16 May 2024. <a href="https://www.cnn.com/2024/05/16/tech/arup-deepfake-scam-loss-hong-kong-intl-hnk">https://www.cnn.com/2024/05/16/tech/arup-deepfake-scam-loss-hong-kong-intl-hnk</a></li></ol></section>
+      <div class="wr-byline">
+        <p>Wesley Dickens runs <a href="/ephod-advisory/">Ephod Advisory</a>, an AI consulting practice
+        working with professional services firms, family offices, and small teams. Before that,
+        nine years of data infrastructure work. <a href="mailto:me@wesleydickens.com">Get in touch</a>.</p>
+      </div>
+    </article>
+    <nav class="wr-nav"><a href="/writing/measuring-time-saved/" class="wr-nav-link is-prev"><span class="wr-nav-dir">&larr; Previous</span><span class="wr-nav-title">How to tell if the AI actually saved anyone time</span></a><a href="/writing/tool-nobody-opens/" class="wr-nav-link is-next"><span class="wr-nav-dir">Next &rarr;</span><span class="wr-nav-title">The tool nobody opens</span></a></nav>
+    <footer class="bg-footer">
+      <p>&copy; 2026 Wesley Dickens</p>
+    </footer>
+  </main>
+</body>
+</html>

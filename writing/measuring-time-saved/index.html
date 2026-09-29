@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to tell if the AI actually saved anyone time — Wesley Dickens</title>
+  <meta name="description" content="Eleven people each saving ninety minutes a week would recover sixteen and a half hours. Where would that show up in the firm’s results?">
+  <meta property="og:title" content="How to tell if the AI actually saved anyone time — Wesley Dickens">
+  <meta property="og:description" content="Eleven people each saving ninety minutes a week would recover sixteen and a half hours. Where would that show up in the firm’s results?">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://wesleydickens.com/writing/measuring-time-saved/">
+  <meta name="twitter:card" content="summary">
+  <meta property="article:published_time" content="2026-05-20">
+  <meta name="author" content="Wesley Dickens">
+  <link rel="canonical" href="https://wesleydickens.com/writing/measuring-time-saved/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/tokens.css">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/writing/styles.css">
+</head>
+<body class="bg-page">
+  <main class="bg-main">
+    <a href="/writing/" class="bg-back">&larr; Writing</a>
+
+    <article class="wr-article">
+      <header class="wr-article-header">
+        <div class="wr-meta">
+          <time datetime="2026-05-20">May 20, 2026</time>
+          <span class="wr-meta-sep">&middot;</span>
+          <span>6 min read</span>
+        </div>
+        <h1 class="wr-title">How to tell if the AI actually saved anyone time</h1>
+        <p class="wr-dek">Eleven people each saving ninety minutes a week would recover sixteen and a half hours. Where would that show up in the firm’s results?</p>
+      </header>
+
+      <div class="wr-body">
+        <p>Suppose eleven people say the new assistant saves them about ninety minutes a week. Each can name a task it helps with. That adds up to sixteen and a half hours a week. But the firm hasn’t taken on more matters, recorded hours haven’t fallen, and the invoices are the same size as last year.</p>
+        <p>Those observations can coexist. The reported savings might omit time spent checking and correcting the output. People might use the recovered time for work the firm does not track, or finish earlier. Before deciding the purchase paid for itself, find out where the difference went.</p>
+        <h2>Nobody has to be lying</h2>
+        <p>The memo that appeared in four minutes is easy to remember. Twenty minutes spent re-prompting a summary that kept dropping the counterparty’s name is less memorable, especially when it happened in three-minute pieces. Abandoned attempts can disappear from the account too: the tool works on three tasks in ten, you finish the other seven the old way, and the successes are what you recall at month-end.</p>
+        <p>Google’s DORA researchers modeled AI adoption across software organizations in 2024 and found individual and system outcomes moving in opposite directions. A 25% increase in adoption was associated with estimated increases of 2.6% in individual flow and 2.2% in job satisfaction, alongside decreases of 1.5% in delivery throughput and 7.2% in delivery stability.<sup class="wr-fn"><a href="#src-1">1</a></sup> People’s experience of their work and the organization’s delivery measures need to be examined separately.</p>
+        <p>Another study followed sixteen experienced developers through 246 real tasks in repositories they had worked in for years. Beforehand they expected AI to make them 24% faster. Afterward, they estimated 20% faster. Measured, they took 19% longer.<sup class="wr-fn"><a href="#src-2">2</a></sup> Completing the work did not correct their estimate.</p>
+        <p>That study concerns developers on open-source code, not lawyers on matters. Its relevance here is the difficulty of estimating how long the same work would have taken without assistance. The same researchers published a follow-up in February: a second experiment pointed toward a speedup, but they described the newer evidence as “very weak” and changed the design.<sup class="wr-fn"><a href="#src-3">3</a></sup> Neither result should become a forecast for your firm.</p>
+        <p>I would be similarly cautious with the widely repeated claim that 95% of enterprise AI pilots return nothing. It comes from a report based on a few dozen executive interviews and about 150 survey responses, with the underlying data not released.<sup class="wr-fn"><a href="#src-4">4</a></sup> That is a weak basis for predicting the outcome of a particular deployment.</p>
+        <p>Self-report is still useful. It can identify tasks people value and whether the work feels less grinding. Ask about the last task and what they did with the output. Treat an estimate of time saved as something to investigate.</p>
+        <h2>Record the baseline before deployment</h2>
+        <p>Start with records the firm already keeps: time entries with task codes, matter open and close dates, preparer and reviewer hours, and write-downs. For turnaround time, you need both the request and the response that completed it.</p>
+        <div class="wr-callout">
+        <span class="wr-callout-label">Before the first login is issued</span>
+        <p>Preserve twelve to twenty-four months of relevant records if they are available, and write down the metric definitions. For a lease abstract, does turnaround begin with the client’s email or when the task reaches the assignee’s queue? Choose before making the comparison. Check that the records support the definition.</p>
+        </div>
+        <p>A year of history helps account for tax season and the summer lull. Comparing March before deployment with July afterward can confuse a seasonal change with a tool’s effect. Explain to staff that the aim is to understand the time a task takes, including review, and how the resulting measures will be used.</p>
+        <h2>Comparisons a twenty-person firm can make</h2>
+        <p>Decide what you will compare before looking at the results. A staggered rollout can let you compare people who have started using the tool with people who have not yet started.</p>
+        <p>A field study of 5,179 customer support agents used a staggered rollout.<sup class="wr-fn"><a href="#src-5">5</a></sup> A small firm can use the same general approach, although its sample will be much smaller. Assign the starting order randomly where practical, and check whether the groups do comparable work. Starting with enthusiasts may help adoption, but their results alone do not establish what other staff will experience.</p>
+        <p>Measure again after people have settled into the work. Early use may concentrate on the tasks shown in training; enthusiasm, practice, and checking effort can change over time. Reviews at ninety and a hundred and eighty days help show whether an initial improvement persisted.</p>
+        <h2>Where the recovered time goes</h2>
+        <p>Consider an associate who gets faster at drafting work billed by the hour. If those hours would have been billed and she has no additional work to fill them, the firm may invoice less while paying the same salary and a new subscription. The efficiency gain is real, but its financial effect depends on the work and billing arrangement.</p>
+        <p>Thomson Reuters’ 2024 survey has professionals expecting AI to save four hours a week within a year. It converts that prediction, for a U.S. lawyer, into “an estimated $100,000 in additional billable hours.”<sup class="wr-fn"><a href="#src-6">6</a></sup> Realizing that revenue requires recovered hours to be filled with billable work.</p>
+        <p>There are other possible outcomes. A memo may get another review pass. Someone may leave earlier. The firm may take on more matters if demand is there, or avoid replacing a departing employee. These outcomes matter in different ways and will not appear in the same metric.</p>
+        <p>Choose which you are trying to achieve. More matters means watching matters opened; fewer late nights means watching hours worked without treating flat revenue as a failure. Keep track of checking effort and output quality alongside speed.</p>
+        <p>Choi, Monahan, and Schwarcz ran law students through four legal tasks with and without an AI assistant, using blind grading. Time fell on all four, between 11.8% and 32.1%. Quality changes were smaller: +0.17, +0.24, +0.07, and −0.07 on a four-point scale, with only one statistically significant.<sup class="wr-fn"><a href="#src-7">7</a></sup> The students were paid a flat rate. The authors cautioned that hourly billing gives practicing lawyers a different incentive, so the observed efficiency gains might not carry over to practice.</p>
+        <p>That limitation matters when deciding what to measure. A faster draft, a better draft, and a more profitable matter are different outcomes. The trial needs to identify which, if any, occurred.</p>
+        <h2>Decide what would make you stop</h2>
+        <p>I spent years building experiment infrastructure, KPI definitions, and the modeling layer behind a company’s numbers. A recurring conversation was why a holdout remained necessary after a metric had improved. The improvement alone did not establish what caused it.</p>
+        <p>Choose the main metric before reviewing the results. If you watch twelve numbers and select the one that improved afterward, you can make an unhelpful purchase look successful without setting out to mislead anyone.</p>
+        <p>Also agree on a stopping condition. For example: <em>if total hours per lease abstract haven’t fallen by day 90, we drop it.</em> Decide how quality will be checked so that a quicker but worse result does not pass. If staff satisfaction is a reason to retain the tool even without time savings, make that an explicit part of the decision.</p>
+        <p>A review may find that the tool helps a little, costs more than the measured time savings, and makes the work noticeably less tedious. The firm can choose to pay for that. It should be able to say that is what it bought.</p>
+      </div>
+      <section class="wr-sources"><div class="wr-sources-label">Sources</div><ol><li id="src-1"><em>2024 Accelerate State of DevOps Report</em>, Google Cloud / DORA, 2024. https://dora.dev/research/2024/dora-report/</li><li id="src-2">Joel Becker, Nate Rush, Beth Barnes, David Rein, “Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity,” METR, 10 July 2025 (arXiv:2507.09089v2, 25 July 2025). https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/</li><li id="src-3">Joel Becker, Nate Rush, Sam Cunningham, David Rein, Ruba Mahamud, “We are Changing our Developer Productivity Experiment Design,” METR, 24 February 2026. https://metr.org/blog/2026-02-24-uplift-update/</li><li id="src-4">MIT Project NANDA, “The GenAI Divide: State of AI in Business 2025,” circulated July–August 2025. Listed as the origin of a widely repeated figure, not as evidence.</li><li id="src-5">Erik Brynjolfsson, Danielle Li, Lindsey R. Raymond, “Generative AI at Work,” NBER Working Paper 31161, April 2023. https://www.nber.org/papers/w31161</li><li id="src-6">Thomson Reuters, <em>Future of Professionals Report 2024</em>, July 2024. https://www.thomsonreuters.com/en/press-releases/2024/july/ai-set-to-save-professionals-12-hours-per-week-by-2029</li><li id="src-7">Jonathan H. Choi, Amy B. Monahan, Daniel Schwarcz, “Lawyering in the Age of Artificial Intelligence,” 109 Minnesota Law Review 147 (2024). https://scholarship.law.umn.edu/minnlrev/vol109/iss1/3/</li></ol></section>
+      <div class="wr-byline">
+        <p>Wesley Dickens runs <a href="/ephod-advisory/">Ephod Advisory</a>, an AI consulting practice
+        working with professional services firms, family offices, and small teams. Before that,
+        nine years of data infrastructure work. <a href="mailto:me@wesleydickens.com">Get in touch</a>.</p>
+      </div>
+    </article>
+    <nav class="wr-nav"><a href="/writing/vendor-diligence/" class="wr-nav-link is-prev"><span class="wr-nav-dir">&larr; Previous</span><span class="wr-nav-title">A diligence checklist for AI vendors</span></a><a href="/writing/family-office-ai/" class="wr-nav-link is-next"><span class="wr-nav-dir">Next &rarr;</span><span class="wr-nav-title">AI in a family office’s shared systems</span></a></nav>
+    <footer class="bg-footer">
+      <p>&copy; 2026 Wesley Dickens</p>
+    </footer>
+  </main>
+</body>
+</html>

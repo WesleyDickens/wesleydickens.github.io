@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decide what the assistant can read before you buy it — Wesley Dickens</title>
+  <meta name="description" content="For document and mailbox assistants, agree on the sources, readers, and permitted actions before evaluating the tool.">
+  <meta property="og:title" content="Decide what the assistant can read before you buy it — Wesley Dickens">
+  <meta property="og:description" content="For document and mailbox assistants, agree on the sources, readers, and permitted actions before evaluating the tool.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://wesleydickens.com/writing/permissions-decision/">
+  <meta name="twitter:card" content="summary">
+  <meta property="article:published_time" content="2026-01-14">
+  <meta name="author" content="Wesley Dickens">
+  <link rel="canonical" href="https://wesleydickens.com/writing/permissions-decision/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/tokens.css">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/writing/styles.css">
+</head>
+<body class="bg-page">
+  <main class="bg-main">
+    <a href="/writing/" class="bg-back">&larr; Writing</a>
+
+    <article class="wr-article">
+      <header class="wr-article-header">
+        <div class="wr-meta">
+          <time datetime="2026-01-14">January 14, 2026</time>
+          <span class="wr-meta-sep">&middot;</span>
+          <span>5 min read</span>
+        </div>
+        <h1 class="wr-title">Decide what the assistant can read before you buy it</h1>
+        <p class="wr-dek">For document and mailbox assistants, agree on the sources, readers, and permitted actions before evaluating the tool.</p>
+      </header>
+
+      <div class="wr-body">
+        <p>An accounting firm wanted an assistant that could answer questions about its document management system: what did we agree to on that engagement, and when does the letter renew? They had a vendor and a quote.</p>
+        <p>Twenty minutes into the meeting I asked where the working papers lived. The document system had some. A shared drive folder called <code>2024 Working</code> had most, because checking a file in took four clicks during an already busy tax season. A senior manager’s personal drive had the rest.</p>
+        <p>The proposed tool could have read only part of the material people needed. Before evaluating its answers, the firm needed to decide which of those locations belonged in the project and who could authorize access to them.</p>
+        <h2>What access decisions settle</h2>
+        <p>For assistants that search documents or sort mail, I start with the accounts and material they would need. A lease summary and a mailbox triage tool can both look straightforward in a demonstration. Connecting them to a firm’s working files raises questions the demonstration may never reach.</p>
+        <p>Which folders can the assistant read? Who may see its answers? Can it send a message, or only draft one? A useful answer may require material the intended user is not entitled to see. In that case, restricting access changes what the tool can do, and the person buying it needs to understand the limitation.</p>
+        <p>These decisions do not settle whether the model is accurate enough or whether the software fits the workflow. They establish what can be tested. Custom software may give you more control over access, but someone at the firm still has to decide where the boundaries belong.</p>
+        <p>Microsoft’s <a href="https://learn.microsoft.com/en-us/sharepoint/restricted-sharepoint-search">Restricted SharePoint Search documentation</a> describes a temporary way to limit discovery while administrators review site and file permissions. That is a practical reminder to review existing access before making the material easier to find.</p>
+        <h2>Two examples with different outcomes</h2>
+        <p>The following two examples are composites.</p>
+        <p>A family office wanted help sorting a general mailbox that received wire confirmations and invoices for work on the Nantucket house. An office manager had handled it for six years. She knew to send insurance to the risk person, larger bills to the CFO, and correspondence from counsel to the printer. Some of those rules had never been written down.</p>
+        <p>An hour of questions produced a one-page routing document. It also clarified which mailbox the tool would need. The shared mailbox was a separate object with its own delegated permissions. The office manager’s personal mailbox held other material, including her performance review. Connecting the latter would have exposed information irrelevant to the task. Keeping the tool in draft mode would leave her responsible for checking the routing before anything went out.</p>
+        <p>The billing example was harder. A firm wanted better narratives from time entries that said “review” or “call re: matter.” Associates were entering a week of time on Friday evening from memory. Those entries did not contain enough detail to explain the work to a client.</p>
+        <p>The firm could require fuller entries closer to when the work happened. It could also test whether an assistant could reconstruct some of the detail from calendars, sent mail, and document versions. The second option would require access to substantially more information than the original proposal implied.</p>
+        <p>Even with that access, the reconstruction would need checking. A calendar invitation does not establish what work took place. The firm would have to accept both the exposure of associates’ correspondence and the cost of reviewing the resulting narratives.</p>
+        <p>I have been in the room when the recommendation was to decline that access and drop the proposed automation. That leaves the billing problem unresolved. It sends the work back to how time is recorded, with all the inconvenience that entails.</p>
+        <h2>Questions to work through before choosing a tool</h2>
+        <div class="wr-callout">
+        <span class="wr-callout-label">Scope the task</span>
+        <ol>
+        <li><strong>Does someone already do this by hand?</strong> Watch them work and list the material they use. Decide which of it an assistant would be allowed to read before trying the task in an approved tool.</li>
+        <li><strong>Can an authorized person find the material?</strong> If they can, check whether the proposed tool can reach the same sources. If they cannot, identify whether the obstacle is access, scattered files, or missing information.</li>
+        <li><strong>What would make an answer acceptable?</strong> A draft for internal review and a number going onto a regulatory form need different checks. Consider deterministic software where the task requires repeatable calculations or rules.</li>
+        <li><strong>What needs to connect?</strong> List the systems that must exchange or reconcile information. Check whether an existing product covers that work and whether its access and hosting arrangements are acceptable.</li>
+        </ol>
+        </div>
+        <h2>When the answer does require a build</h2>
+        <p>I built a connection across an investment platform, an accounting file, bank portals, and a document store for a family office. The existing reconciliation lived in a spreadsheet with tabs named after cousins. The office needed a consolidated view that its separate systems did not provide.</p>
+        <p>The first month went into deciding who could see that view. Being able to read one account’s records did not automatically mean someone should see the combined picture. The connection was useful precisely because it brought information together, which also made the result more sensitive.</p>
+        <p>That work still required engineering. Agreeing on access did not build the integrations or reconcile the numbers. It gave us a scope to build against and a clearer account of who the finished system was for.</p>
+        <h2>When the material is too sensitive</h2>
+        <p>A firm may decide that some files should stay out of an assistant altogether. Make that decision for the material and task under consideration. A shared mailbox containing approved correspondence may be usable even when an associate’s personal mailbox is not.</p>
+        <p>Also ask which tools people already use. A restriction on the proposed system does little to address documents being pasted into personal accounts. That needs a conversation about the work people are trying to finish and a review of the accounts and app connections already in use.</p>
+        <p>For the accounting firm, the immediate question was whether the working papers could be made available to an approved tool without exposing unrelated files. Answering that question would tell them what they could test, and whether the vendor’s proposal covered it.</p>
+      </div>
+      
+      <div class="wr-byline">
+        <p>Wesley Dickens runs <a href="/ephod-advisory/">Ephod Advisory</a>, an AI consulting practice
+        working with professional services firms, family offices, and small teams. Before that,
+        nine years of data infrastructure work. <a href="mailto:me@wesleydickens.com">Get in touch</a>.</p>
+      </div>
+    </article>
+    <nav class="wr-nav"><a href="/writing/ai-pilot-data/" class="wr-nav-link is-next"><span class="wr-nav-dir">Next &rarr;</span><span class="wr-nav-title">When an AI assistant cites the wrong policy</span></a></nav>
+    <footer class="bg-footer">
+      <p>&copy; 2026 Wesley Dickens</p>
+    </footer>
+  </main>
+</body>
+</html>

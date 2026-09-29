@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>When an AI assistant cites the wrong policy — Wesley Dickens</title>
+  <meta name="description" content="The answer cited a real document. It was the retired policy, saved beside its replacement.">
+  <meta property="og:title" content="When an AI assistant cites the wrong policy — Wesley Dickens">
+  <meta property="og:description" content="The answer cited a real document. It was the retired policy, saved beside its replacement.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://wesleydickens.com/writing/ai-pilot-data/">
+  <meta name="twitter:card" content="summary">
+  <meta property="article:published_time" content="2026-02-25">
+  <meta name="author" content="Wesley Dickens">
+  <link rel="canonical" href="https://wesleydickens.com/writing/ai-pilot-data/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/tokens.css">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/writing/styles.css">
+</head>
+<body class="bg-page">
+  <main class="bg-main">
+    <a href="/writing/" class="bg-back">&larr; Writing</a>
+
+    <article class="wr-article">
+      <header class="wr-article-header">
+        <div class="wr-meta">
+          <time datetime="2026-02-25">February 25, 2026</time>
+          <span class="wr-meta-sep">&middot;</span>
+          <span>5 min read</span>
+        </div>
+        <h1 class="wr-title">When an AI assistant cites the wrong policy</h1>
+        <p class="wr-dek">The answer cited a real document. It was the retired policy, saved beside its replacement.</p>
+      </header>
+
+      <div class="wr-body">
+        <p>A partner told me her firm’s assistant had hallucinated. She had asked about an internal policy, the answer came back wrong, and she knew it was wrong because she had written the current policy herself the previous spring.</p>
+        <p>We opened the cited file. The assistant had quoted it word for word, but it was the 2019 version, sitting in the same folder as the current one.</p>
+        <p>The pilot had failed to answer her question correctly. Finding the retired document explained one reason why. A citation showed where the answer came from; it did not establish that the policy still applied.</p>
+        <p>Replacing the model would not, by itself, resolve which policy the firm considered current. That decision needed to be represented in the material the assistant searched.</p>
+        <h2>What does “client” mean here?</h2>
+        <p>Consider a firm where finance counts a client as a billing entity, the partners count a family or group of related LLCs, and marketing counts a closed-won deal in the CRM. Those definitions can each serve a purpose. Trouble starts when someone asks for “the client count” without specifying which one they need.</p>
+        <p>A report can document the definition it uses, though reports can disagree too. An assistant with access to all three systems needs a way to choose the relevant definition or ask for clarification. Otherwise, two partners can ask similar questions and receive different counts without seeing why.</p>
+        <p>A fluent explanation can make that disagreement harder to spot. A wrong answer may cite real records and contain no obvious calculation error. The person reading it needs to know what was counted, not just where the records came from.</p>
+        <h2>What reaches the search index</h2>
+        <p>Many document assistants split files into passages and use numerical representations of the text to find passages related to a question. A close match in wording or meaning does not necessarily identify the current, complete, or applicable document.</p>
+        <p>A superseded policy may resemble the question more closely than its replacement. Modified dates can also mislead: resaving an old file can make it appear newer than the policy in force. The system needs to use reliable version or status information, or search a collection that excludes retired policies.</p>
+        <p>Scanned documents introduce a different problem. A scan without a text layer can be missed by an ingestion process that only extracts existing text. OCR can read text from the image, but it must be included in the process and its output checked.<sup class="wr-fn"><a href="#src-2">2</a></sup> Executed agreements and signed letters deserve attention because the copy that matters may be a scan. A document created digitally can also parse badly; neither format guarantees usable extraction.</p>
+        <p>Folder context matters too. <code>/Clients/Former/</code> and <code>/Clients/Active/</code> tell a reader something that the text inside a file may not. If an ingestion process drops that context, passages from an archive can look as relevant as passages from the current folder.</p>
+        <p>Chunking does not have to discard metadata. Systems can carry document information onto each chunk.<sup class="wr-fn"><a href="#src-3">3</a></sup> Check whether yours preserves the context you need and whether retrieval actually uses it. Keeping a path as a citation is not the same as using it to exclude a retired document.</p>
+        <p>Access deserves a separate check. A file that was rarely discovered may become easy to surface through an assistant. Microsoft introduced Restricted SharePoint Search as a temporary measure while administrators review permissions.<sup class="wr-fn"><a href="#src-1">1</a></sup> I discuss the scoping decisions in <a href="/writing/permissions-decision/">Decide what the assistant can read before you buy it</a>.</p>
+        <p>There is useful information to recover as well. A note such as <em>spoke with Jim, board meets in May, revisit after</em> can help explain a relationship that structured fields miss. But terse notes leave room for interpretation. Keep the source text beside any extracted field and check a sample by hand.</p>
+        <h2>Questions to ask before you buy anything</h2>
+        <p>Start with people who know the records. Bring in whoever manages the systems for questions about extraction and history.</p>
+        <ol>
+        <li><strong>Write down three real questions.</strong> Use sentences someone would type, such as <em>Which clients haven’t we billed this quarter?</em> The wording will expose definitions and sources that a broad use-case label leaves out.</li>
+        <li><strong>Ask three people to define the central noun.</strong> Client, matter, engagement, household. Ask separately, in writing. If the definitions differ, decide which belongs to each question and how the answer should identify it.</li>
+        <li><strong>Follow one client through the systems.</strong> Look in billing, the CRM, the document store, email, and any working spreadsheet. Note different spellings and decide which system is authoritative for each field when records disagree.</li>
+        <li><strong>Try to recover an important field’s value from a year ago.</strong> A status, fee arrangement, or rate will do. Check what history exists before promising trend analysis. If it is missing, discuss snapshots with the system owner, including what to retain and who maintains them.</li>
+        <li><strong>Open the folder where an answer should live.</strong> Look through the last twenty files for near-duplicates and version numbers. Try selecting text in a scan. If you cannot, check whether the ingestion process performs OCR and inspect what it extracts.</li>
+        <li><strong>Decide how to detect a wrong answer.</strong> Specify the check, who runs it, and what happens when it fails. Do not rely only on users volunteering that something went wrong.</li>
+        </ol>
+        <h2>Separate file cleanup from decisions about the records</h2>
+        <p>Deduplicating files, running OCR, and excluding an archive from an index can be scoped as implementation work. Deciding what counts as a client, which system is authoritative, or whether an old fee arrangement still applies requires someone with authority over those records.</p>
+        <p>A warehouse does not remove that distinction. I have built them; the definition still has to be agreed before the schema can represent it. Assign those decisions to named owners and settle the ones the pilot depends on before testing its answers.</p>
+        <p>If a practice group already maintains a suitable collection, start there. A narrower set of questions may be answerable without cleaning the entire drive. Ask a prospective vendor which sources and questions it would leave out, and what that would prevent users from doing.</p>
+        <p>For the policy question, the test is concrete: can the assistant return the current clause and identify the version it used? Repeat the check after the next policy update. That is the behavior the partner needed from the pilot.</p>
+      </div>
+      <section class="wr-sources"><div class="wr-sources-label">Sources</div><ol><li id="src-1">Tony Redmond, “Restricted SharePoint Search Limits Copilot Access,” Office 365 for IT Pros, 7 March 2024. https://office365itpros.com/2024/03/07/restricted-sharepoint-search/</li><li id="src-2">Microsoft Learn, <a href="https://learn.microsoft.com/en-us/azure/search/cognitive-search-skill-ocr">OCR cognitive skill</a>.</li><li id="src-3">Microsoft Learn, <a href="https://learn.microsoft.com/en-us/azure/search/search-how-to-define-index-projections">Define an index projection for parent-child indexing</a>.</li></ol></section>
+      <div class="wr-byline">
+        <p>Wesley Dickens runs <a href="/ephod-advisory/">Ephod Advisory</a>, an AI consulting practice
+        working with professional services firms, family offices, and small teams. Before that,
+        nine years of data infrastructure work. <a href="mailto:me@wesleydickens.com">Get in touch</a>.</p>
+      </div>
+    </article>
+    <nav class="wr-nav"><a href="/writing/permissions-decision/" class="wr-nav-link is-prev"><span class="wr-nav-dir">&larr; Previous</span><span class="wr-nav-title">Decide what the assistant can read before you buy it</span></a><a href="/writing/vendor-diligence/" class="wr-nav-link is-next"><span class="wr-nav-dir">Next &rarr;</span><span class="wr-nav-title">A diligence checklist for AI vendors</span></a></nav>
+    <footer class="bg-footer">
+      <p>&copy; 2026 Wesley Dickens</p>
+    </footer>
+  </main>
+</body>
+</html>
