@@ -1,0 +1,326 @@
+/* ═══════════════════════════════════════════════════════════
+   Family Office Core — product and policy page overrides
+   Loaded after /tokens.css and /styles.css.
+   Root classes (bg-page, bg-main, bg-back, bg-kicker, bg-rule,
+   bg-section, bg-section-heading, bg-section-tight, bg-contact,
+   bg-links, bg-link, bg-footer) come from /styles.css.
+   Only new patterns live here.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Header ──────────────────────────────────────────────── */
+.fo-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.fo-title {
+  font-family: var(--font-display);
+  font-variation-settings: 'opsz' 60;
+  font-weight: 500;
+  font-size: clamp(2.5rem, 7vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--ink-strong);
+}
+
+.fo-title-legal {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+.fo-lede {
+  font-family: var(--font-display);
+  font-variation-settings: 'opsz' 16;
+  font-size: clamp(1.0625rem, 1.6vw, 1.1875rem);
+  line-height: 1.45;
+  color: var(--ink-muted);
+  max-width: 30em;
+}
+
+.fo-meta {
+  font-family: var(--font-display);
+  font-variation-settings: 'opsz' 18;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--ink-faint);
+}
+
+.fo-meta time {
+  font-style: normal;
+}
+
+/* Header carries body content above the first rule,
+   so undo the tight first-rule override from the root sheet. */
+.bg-header + .bg-rule {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* ── Intro prose ─────────────────────────────────────────── */
+.fo-intro {
+  margin-top: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.fo-intro p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--ink-muted);
+  max-width: 36em;
+  margin-bottom: 1rem;
+}
+
+.fo-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.fo-contact-line {
+  margin-top: 1.5rem;
+}
+
+/* ── Hairline rows (sources, principles) ─────────────────── */
+.fo-rows {
+  list-style: none;
+  border-top: 1px solid var(--rule);
+}
+
+.fo-row {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.fo-row-label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-faint);
+}
+
+.fo-row-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.fo-row-name {
+  font-family: var(--font-display);
+  font-variation-settings: 'opsz' 18;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: var(--ink-strong);
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.fo-row-desc {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--ink-muted);
+  max-width: 38em;
+}
+
+.fo-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  max-width: 36em;
+}
+
+.fo-points li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--ink-muted);
+}
+
+.fo-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.8em;
+  width: 0.5rem;
+  height: 1px;
+  background: var(--ink-ghost);
+}
+
+/* ── Callout (statements quoted verbatim) ────────────────── */
+.fo-callout {
+  margin: 1.25rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 2px solid var(--accent);
+  background: var(--accent-wash);
+  border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+  max-width: 38em;
+}
+
+.fo-callout p,
+.fo-legal .fo-callout p {
+  color: var(--ink);
+  margin: 0;
+}
+
+/* ── Inline links in prose ───────────────────────────────── */
+.fo-intro a,
+.fo-points a,
+.fo-callout a,
+.fo-legal a,
+.bg-section > p a {
+  color: var(--ink-strong);
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 1px;
+  overflow-wrap: anywhere;
+  transition: color var(--dur-fast) ease;
+}
+
+.fo-intro a:hover,
+.fo-points a:hover,
+.fo-callout a:hover,
+.fo-legal a:hover,
+.bg-section > p a:hover {
+  color: var(--accent-ink);
+}
+
+/* ── Contents list on policy pages ───────────────────────── */
+.fo-toc {
+  margin-top: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.fo-toc-label {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--ink-faint);
+  margin-bottom: 0.85rem;
+}
+
+.fo-toc ol {
+  columns: 2;
+  column-gap: 2rem;
+  margin-left: 1.25rem;
+}
+
+.fo-toc li {
+  break-inside: avoid;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--ink-faint);
+  margin-bottom: 0.45rem;
+}
+
+.fo-toc li::marker {
+  color: var(--ink-ghost);
+  font-feature-settings: 'tnum';
+}
+
+.fo-toc a {
+  color: var(--ink-muted);
+  transition: color var(--dur-fast) ease;
+}
+
+.fo-toc a:hover {
+  color: var(--accent-ink);
+}
+
+/* ── Policy prose ────────────────────────────────────────── */
+.fo-legal section + section {
+  margin-top: clamp(2.25rem, 4.5vw, 3rem);
+}
+
+.fo-legal h2 {
+  font-family: var(--font-display);
+  font-variation-settings: 'opsz' 28;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--ink-strong);
+  margin-bottom: 1rem;
+  scroll-margin-top: 1.5rem;
+}
+
+.fo-legal h3 {
+  font-family: var(--font-display);
+  font-variation-settings: 'opsz' 18;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: var(--ink-strong);
+  margin: 1.75rem 0 0.5rem;
+}
+
+.fo-legal p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--ink-muted);
+  margin-bottom: 1rem;
+  max-width: 38em;
+}
+
+.fo-legal ul,
+.fo-legal ol {
+  margin: 0 0 1rem 1.25rem;
+  max-width: 38em;
+}
+
+.fo-legal li {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--ink-muted);
+  margin-bottom: 0.4rem;
+}
+
+.fo-legal li::marker {
+  color: var(--ink-ghost);
+}
+
+.fo-legal strong {
+  font-weight: 600;
+  color: var(--ink-strong);
+}
+
+.fo-legal code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  color: var(--ink);
+}
+
+.fo-legal address {
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+/* ── Footer links ────────────────────────────────────────── */
+.fo-foot-link {
+  color: var(--ink-muted);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+  transition: color var(--dur-fast) ease, border-color var(--dur-fast) ease;
+}
+
+.fo-foot-link:hover {
+  color: var(--accent-ink);
+  border-bottom-color: var(--accent);
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .fo-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.4rem;
+  }
+
+  .fo-toc ol {
+    columns: 1;
+  }
+}

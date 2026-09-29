@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family Office Core — Ephod Advisory</title>
+  <meta name="description" content="Family Office Core connects a family&rsquo;s bank accounts, QuickBooks accounting, office mail, and shared Google Drive into a private workspace the family can ask questions of through Claude. Operated by Ephod Advisory LLC.">
+  <meta property="og:title" content="Family Office Core">
+  <meta property="og:description" content="A private, read-only workspace for a family&rsquo;s bank accounts, accounting, office mail, and shared documents, queried through Claude. Operated by Ephod Advisory LLC.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wesleydickens.com/family-office/">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/tokens.css">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/family-office/styles.css">
+</head>
+<body class="bg-page">
+  <main class="bg-main">
+    <a href="/" class="bg-back">&larr; Wesley Dickens</a>
+
+    <header class="bg-header fo-header">
+      <span class="bg-kicker">Ephod Advisory LLC &middot; Pilot service</span>
+      <h1 class="fo-title">Family Office Core</h1>
+      <p class="fo-lede">A private workspace that brings a family&rsquo;s bank accounts, accounting, office mail, and shared documents together, so the family can ask questions about them through Claude.</p>
+    </header>
+
+    <div class="fo-intro">
+      <p>Family Office Core connects, with the family&rsquo;s authorization, to the financial and document sources a family office already uses. It reads that information into a workspace that belongs to one family only, and lets the family&rsquo;s authorized members ask questions about it through Claude, the AI assistant made by Anthropic.</p>
+      <p>Family Office Core is operated by Ephod Advisory LLC. It is currently a pilot service, available to invited families.</p>
+    </div>
+
+    <hr class="bg-rule">
+
+    <section class="bg-section" aria-labelledby="fo-sources">
+      <h2 id="fo-sources" class="bg-section-heading">What it connects, and why</h2>
+      <ul class="fo-rows">
+        <li class="fo-row">
+          <span class="fo-row-label">Bank accounts</span>
+          <span class="fo-row-body">
+            <span class="fo-row-name">Financial institutions, through Plaid</span>
+            <span class="fo-row-desc">Account details, balances, and transactions for the accounts the family chooses to connect, used to report on cash and to match bank activity against the books and documents. Read-only: the service cannot move money or make payments.</span>
+          </span>
+        </li>
+        <li class="fo-row">
+          <span class="fo-row-label">Accounting</span>
+          <span class="fo-row-body">
+            <span class="fo-row-name">QuickBooks Online, through Intuit</span>
+            <span class="fo-row-desc">Chart of accounts, accounting transactions, and standard financial reports for the companies the family connects, used to reconcile the books against bank and document records. Read-only: the service does not create or change anything in QuickBooks.</span>
+          </span>
+        </li>
+        <li class="fo-row">
+          <span class="fo-row-label">Office mail</span>
+          <span class="fo-row-body">
+            <span class="fo-row-name">Gmail, read-only</span>
+            <span class="fo-row-desc">Only the family office mailbox the family authorizes, and only the messages that match the search, label, or senders set up for the family&rsquo;s workspace, used to find notices, statements, and correspondence the family asks about. The service cannot send, change, or delete mail.</span>
+          </span>
+        </li>
+        <li class="fo-row">
+          <span class="fo-row-label">Documents</span>
+          <span class="fo-row-body">
+            <span class="fo-row-name">A shared Google Drive, read-only</span>
+            <span class="fo-row-desc">Files in the shared drive the family chooses to add the workspace to, used to answer questions about agreements, reports, and tax documents. The service cannot change or delete files.</span>
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <hr class="bg-rule">
+
+    <section class="bg-section" aria-labelledby="fo-how">
+      <h2 id="fo-how" class="bg-section-heading">How it works</h2>
+      <ul class="fo-points">
+        <li>Each family has its own workspace, with its own database, connection credentials, and knowledge index, kept separate from every other family&rsquo;s.</li>
+        <li>Connected information is indexed by Adapter, a knowledge-platform provider working on our behalf, so it can be searched and used to answer questions.</li>
+        <li>Authorized members ask questions through Claude. Claude sends the question to Family Office Core, which returns the relevant information from that family&rsquo;s workspace only.</li>
+        <li>The service is read-only against every connected source. It does not make payments, execute trades, file documents, or change records in any connected account.</li>
+        <li>A family can disconnect any source at any time: from the Connections page after signing in, at the provider, or by contacting us.</li>
+      </ul>
+    </section>
+
+    <hr class="bg-rule">
+
+    <section class="bg-section" aria-labelledby="fo-not">
+      <h2 id="fo-not" class="bg-section-heading">What it is not</h2>
+      <p>Family Office Core organizes and retrieves a family&rsquo;s own information. It does not give financial, tax, legal, or investment advice. AI-generated answers can be incomplete or wrong, so check them against the source records and have a qualified professional review anything you intend to rely on.</p>
+    </section>
+
+    <hr class="bg-rule">
+
+    <section class="bg-section" aria-labelledby="fo-google">
+      <h2 id="fo-google" class="bg-section-heading">Google user data</h2>
+      <div class="fo-callout">
+        <p>Family Office Core&rsquo;s use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+      </div>
+      <p>The <a href="/family-office/privacy/#google-user-data">Privacy Policy</a> explains exactly what Google data the service reads, how it is used, and how to revoke access.</p>
+    </section>
+
+    <hr class="bg-rule">
+
+    <section class="bg-section" aria-labelledby="fo-policies">
+      <h2 id="fo-policies" class="bg-section-heading">Policies and contact</h2>
+      <div class="bg-links">
+        <a href="/family-office/privacy/" class="bg-link">
+          <span class="bg-link-tag">Effective September 28, 2026</span>
+          <span class="bg-link-name">Privacy Policy</span>
+          <span class="bg-link-desc">What we collect from connected sources, how we use and protect it, and your choices</span>
+        </a>
+        <a href="/family-office/terms/" class="bg-link">
+          <span class="bg-link-tag">Effective September 28, 2026</span>
+          <span class="bg-link-name">Terms of Service and End-User License Agreement</span>
+          <span class="bg-link-desc">The agreement that governs use of Family Office Core</span>
+        </a>
+      </div>
+      <p class="fo-contact-line">Questions, support, and privacy requests: <a href="mailto:privacy@wesleydickens.com">privacy@wesleydickens.com</a></p>
+    </section>
+
+    <footer class="bg-footer">
+      <p>&copy; 2026 Ephod Advisory LLC &middot; <a href="/family-office/privacy/" class="fo-foot-link">Privacy</a> &middot; <a href="/family-office/terms/" class="fo-foot-link">Terms</a></p>
+    </footer>
+  </main>
+</body>
+</html>
