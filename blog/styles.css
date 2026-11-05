@@ -30,6 +30,17 @@
   max-width: 16em;
 }
 
+/* Lede: the opening paragraph, set as a standfirst above the rule. */
+.post-lede {
+  margin-top: 0.5rem;
+  font-family: var(--font-display);
+  font-variation-settings: 'opsz' 20;
+  font-size: clamp(1.1875rem, 1.7vw, 1.3125rem);
+  line-height: 1.5;
+  color: var(--ink);
+  max-width: 30em;
+}
+
 /* Post header carries a full title, so the rule below it gets a
    tighter cadence than the default section rule. */
 .post-header + .bg-rule {
@@ -47,23 +58,23 @@
   font-family: var(--font-display);
   font-variation-settings: 'opsz' 16;
   font-size: 1.0625rem;
-  line-height: 1.65;
+  line-height: 1.7;
   color: var(--ink);
 }
 
 .post-body p {
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.75rem;
 }
 
 .post-body ul {
   list-style: none;
-  margin: 0 0 1.4rem;
+  margin: 0 0 1.75rem;
 }
 
 .post-body li {
   position: relative;
   padding-left: 1.5rem;
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.7rem;
 }
 
 .post-body li::before {
@@ -77,9 +88,31 @@
   margin-bottom: 0;
 }
 
+/* ── Refrain — three lines that read as one beat ─────────── */
+.post-refrain {
+  margin: 2.25rem 0;
+}
+
+.post-refrain p {
+  margin-bottom: 0.6rem;
+}
+
+.post-refrain p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Section break — the 2rem mark from the home index ──── */
+.post-break {
+  border: none;
+  width: 2rem;
+  height: 1px;
+  background: var(--ink-ghost);
+  margin: 2.75rem 0;
+}
+
 /* ── Post figure — a plate, not a hero ──────────────────── */
 .post-figure {
-  margin: 2rem 0 2.25rem;
+  margin: 2.5rem 0;
 }
 
 .post-figure img {
