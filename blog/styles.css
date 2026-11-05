@@ -1,0 +1,86 @@
+/* ═══════════════════════════════════════════════════════════
+   Blog — index + post styles
+   Loaded after /tokens.css and /styles.css.
+   Root classes (bg-back, bg-kicker, bg-rule, bg-section,
+   bg-links, bg-link, bg-footer) come from /styles.css.
+   Only genuinely new patterns live here.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Blog index ─────────────────────────────────────────── */
+/* The post list sits directly under the rule; no section heading
+   above it, so drop the list's default top margin. */
+.blog-index .bg-links {
+  margin-top: 0;
+}
+
+/* ── Post header ────────────────────────────────────────── */
+.post-header {
+  display: grid;
+  gap: 1rem;
+}
+
+.post-title {
+  font-family: var(--font-display);
+  font-variation-settings: 'opsz' 48;
+  font-weight: 500;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  color: var(--ink-strong);
+  max-width: 16em;
+}
+
+/* Post header carries a full title, so the rule below it gets a
+   tighter cadence than the default section rule. */
+.post-header + .bg-rule {
+  margin: clamp(1.75rem, 3.5vw, 2.5rem) 0;
+}
+
+/* ── Post body — sustained reading ──────────────────────── */
+/* Serif at reading size, full ink (not muted) for long-form prose. */
+.post-body {
+  max-width: 36rem;
+}
+
+.post-body p,
+.post-body li {
+  font-family: var(--font-display);
+  font-variation-settings: 'opsz' 16;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+.post-body p {
+  margin-bottom: 1.4rem;
+}
+
+.post-body ul {
+  list-style: none;
+  margin: 0 0 1.4rem;
+}
+
+.post-body li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.55rem;
+}
+
+.post-body li::before {
+  content: '\2013';
+  position: absolute;
+  left: 0;
+  color: var(--ink-faint);
+}
+
+.post-body > :last-child {
+  margin-bottom: 0;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .post-body p,
+  .post-body li {
+    font-size: 1rem;
+  }
+}
